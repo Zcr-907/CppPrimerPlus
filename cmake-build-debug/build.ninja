@@ -78,6 +78,12 @@ build CMakeFiles/Chapter2.dir/chapter_2/Chapter2.cpp.o: CXX_COMPILER__Chapter2_D
   OBJECT_DIR = CMakeFiles/Chapter2.dir
   OBJECT_FILE_DIR = CMakeFiles/Chapter2.dir/chapter_2
 
+build CMakeFiles/Chapter2.dir/chapter_2/S01_BitOffset.cpp.o: CXX_COMPILER__Chapter2_Debug /Users/leilimin/IDEA_ALei/CppPrimerPlus/chapter_2/S01_BitOffset.cpp || cmake_object_order_depends_target_Chapter2
+  DEP_FILE = CMakeFiles/Chapter2.dir/chapter_2/S01_BitOffset.cpp.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk -std=gnu++11
+  OBJECT_DIR = CMakeFiles/Chapter2.dir
+  OBJECT_FILE_DIR = CMakeFiles/Chapter2.dir/chapter_2
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Chapter2
@@ -86,7 +92,7 @@ build CMakeFiles/Chapter2.dir/chapter_2/Chapter2.cpp.o: CXX_COMPILER__Chapter2_D
 #############################################
 # Link the executable Chapter2
 
-build Chapter2: CXX_EXECUTABLE_LINKER__Chapter2_Debug CMakeFiles/Chapter2.dir/chapter_2/Chapter2.cpp.o
+build Chapter2: CXX_EXECUTABLE_LINKER__Chapter2_Debug CMakeFiles/Chapter2.dir/chapter_2/Chapter2.cpp.o CMakeFiles/Chapter2.dir/chapter_2/S01_BitOffset.cpp.o
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk
   OBJECT_DIR = CMakeFiles/Chapter2.dir
   POST_BUILD = :
