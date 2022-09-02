@@ -1,10 +1,23 @@
 # 指定最小 CMAKE 版本要求
 cmake_minimum_required(VERSION 3.21)
 
-# 设置项目名称
-project(CppPrimerPlus)
+# 设置项目名称,和所使用的语言
+project(CppPrimerPlus C CXX)
 
+# 设置变量: 使用c11标准来编译cpp
 set(CMAKE_CXX_STANDARD 11)
+
+# 设置变量: 变量名custom,变量值var1 var2 ==> 类比Makefile
+set(custom var1 var2)
+
+# 向终端输出用户自定义的信息
+# STATUS: 前缀为"-"
+# SEND_ERROR: 产生错误,生成过程被跳过
+# FATAL_ERROR: 立即终止所有cmake过程
+MESSAGE(STATUS "This is BINARY dir " ${CppPrimerPlus_BINARY_DIR})
+MESSAGE(STATUS "This is SOURCE dir " ${CppPrimerPlusSOURCE_DIR})
+
+# 生成可执行文件: 可执行文件名=CppPrimerPlus,依赖文件为main.cpp
 add_executable(CppPrimerPlus main.cpp)
 
 #[[
