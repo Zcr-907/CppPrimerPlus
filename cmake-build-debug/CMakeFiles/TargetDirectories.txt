@@ -1,4 +1,6 @@
 /Users/leilimin/IDEA_ALei/CppPrimerPlus/cmake-build-debug/CMakeFiles/rebuild_cache.dir
 /Users/leilimin/IDEA_ALei/CppPrimerPlus/cmake-build-debug/CMakeFiles/edit_cache.dir
-/Users/leilimin/IDEA_ALei/CppPrimerPlus/cmake-build-debug/CMakeFiles/Chapter2.dir
-/Users/leilimin/IDEA_ALei/CppPrimerPlus/cmake-build-debug/CMakeFiles/CppPrimerPlus.dir
+/Users/leilimin/IDEA_ALei/CppPrimerPlus/cmake-build-debug/CMakeFiles/main.dir
+/Users/leilimin/IDEA_ALei/CppPrimerPlus/cmake-build-debug/csapp/bin/CMakeFiles/rebuild_cache.dir
+/Users/leilimin/IDEA_ALei/CppPrimerPlus/cmake-build-debug/csapp/bin/CMakeFiles/edit_cache.dir
+/Users/leilimin/IDEA_ALei/CppPrimerPlus/cmake-build-debug/csapp/bin/CMakeFiles/chapter02.dir

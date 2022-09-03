@@ -1,7 +1,6 @@
-// Created by Zcr on 2022/9/2.
 #include <iostream>
 
-void BitOffset() {
+void lab01() {
     using namespace std; // 设置名称空间
     // 测试证明: << 左移运算符,会讲所有的高位依次剔除。例如10....111 <===> 0.....1110
     cout << "[有符号负数左移]: " << (0xBFFFFFFF << 1) << endl;

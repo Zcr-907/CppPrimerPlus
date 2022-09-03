@@ -140,7 +140,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=CppPrimerPlus
+CMAKE_PROJECT_NAME:STATIC=CPP_DEV
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib
@@ -205,13 +205,22 @@ CMAKE_STRIP:FILEPATH=/Applications/Xcode.app/Contents/Developer/Toolchains/Xcode
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-CppPrimerPlus_BINARY_DIR:STATIC=/Users/leilimin/IDEA_ALei/CppPrimerPlus/cmake-build-debug
+CPP_DEV_BINARY_DIR:STATIC=/Users/leilimin/IDEA_ALei/CppPrimerPlus/cmake-build-debug
 
 //Value Computed by CMake
-CppPrimerPlus_IS_TOP_LEVEL:STATIC=ON
+CPP_DEV_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-CppPrimerPlus_SOURCE_DIR:STATIC=/Users/leilimin/IDEA_ALei/CppPrimerPlus
+CPP_DEV_SOURCE_DIR:STATIC=/Users/leilimin/IDEA_ALei/CppPrimerPlus
+
+//Value Computed by CMake
+CppPrimerPlus_BINARY_DIR:STATIC=/Users/leilimin/IDEA_ALei/CppPrimerPlus/cmake-build-debug/csapp/bin
+
+//Value Computed by CMake
+CppPrimerPlus_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+CppPrimerPlus_SOURCE_DIR:STATIC=/Users/leilimin/IDEA_ALei/CppPrimerPlus/csapp
 
 
 ########################
@@ -306,7 +315,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=2
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP
