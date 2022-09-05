@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD 11)
 # 生成可执行文件: 可执行文件名=main,依赖文件为main.cpp
 add_executable(main main.cpp)
 
-# 指定儿模块
+# 指定子模块
 ADD_SUBDIRECTORY(csapp)
 
 # ==================================================================================================================
@@ -21,10 +21,8 @@ ADD_SUBDIRECTORY(csapp)
     ./build/Chapter2    # 运行Chapter2程序
 #]]
 
-
 ## 设置变量: 变量名custom,变量值var1 var2 ==> 类比Makefile
 #set(custom var1 var2)
-
 
 ## 向终端输出用户自定义的信息
 ## STATUS: 前缀为"-"
