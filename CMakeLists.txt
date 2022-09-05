@@ -11,7 +11,7 @@ set(CMAKE_CXX_STANDARD 11)
 add_executable(main main.cpp)
 
 # 指定儿模块
-ADD_SUBDIRECTORY(csapp csapp/bin)
+ADD_SUBDIRECTORY(csapp)
 
 # ==================================================================================================================
 #[[

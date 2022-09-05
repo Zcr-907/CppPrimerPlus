@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
 
     /* Hmm...  Six phases must be more secure than one phase! */
     input = read_line();             /* Get input                   */
-    $0x402400(input);                  /* Run the phase               */
+    phase_1(input);                  /* Run the phase               */
     phase_defused();                 /* Drat!  They figured it out!
 				      * Let me know how they did it. */
     printf("Phase 1 defused. How about the next one?\n");
