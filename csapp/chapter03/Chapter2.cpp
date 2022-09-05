@@ -1,6 +1,7 @@
 // 第三章程序入口
 
 int main() {
-    lab02();
+    int a=1;
+    return a * 12;
 }
 
