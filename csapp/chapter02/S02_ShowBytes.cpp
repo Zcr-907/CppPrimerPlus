@@ -19,7 +19,6 @@ void showBytes(bytePointer start, size_t len) {
     for (i = 0; i < len; ++i)
         printf("%p\t0x%.2x\n", start + i, start[i]);
     printf("\n");
-
 }
 
 

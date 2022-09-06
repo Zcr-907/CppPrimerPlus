@@ -10,8 +10,8 @@ set(CMAKE_CXX_STANDARD 11)
 # 生成可执行文件: 可执行文件名=main,依赖文件为main.cpp
 add_executable(main main.cpp)
 
-# 指定子模块
-ADD_SUBDIRECTORY(csapp)
+# 指定子模块,文件生成至build/csapp内
+ADD_SUBDIRECTORY(csapp csapp)
 
 # ==================================================================================================================
 #[[

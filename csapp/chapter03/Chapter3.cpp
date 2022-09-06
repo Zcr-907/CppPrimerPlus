@@ -1,7 +1,6 @@
 // 第三章程序入口
-
+#include "Hello.h"
 int main() {
-    int a=1;
-    return a * 12;
+    printHello();
 }
 

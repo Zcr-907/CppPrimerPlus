@@ -12,6 +12,8 @@ ADD_LIBRARY(printHello_share SHARED Hello.cpp Hello.h)
 SET_TARGET_PROPERTIES(printHello_share PROPERTIES OUTPUT_NAME "printHello")
 SET_TARGET_PROPERTIES(printHello_share PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 
+# 安装头文件: 安装位置见上级模块
 INSTALL(FILES Hello.h DESTINATION include/hello)
+# 安装库文件: 安装位置见上级模块
 INSTALL(TARGETS printHello_share printHello_static LIBRARY DESTINATION  lib ARCHIVE DESTINATION lib)
 
