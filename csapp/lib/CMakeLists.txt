@@ -15,5 +15,11 @@ SET_TARGET_PROPERTIES(printHello_share PROPERTIES CLEAN_DIRECT_OUTPUT 1)
 # 安装头文件: 安装位置见上级模块
 INSTALL(FILES Hello.h DESTINATION include/hello)
 # 安装库文件: 安装位置见上级模块
-INSTALL(TARGETS printHello_share printHello_static LIBRARY DESTINATION  lib ARCHIVE DESTINATION lib)
+INSTALL(TARGETS printHello_share printHello_static LIBRARY DESTINATION lib ARCHIVE DESTINATION lib)
+
+# ====================================================================================================================
+# 生成库: ShowBytesByType_Share
+ADD_LIBRARY(ShowBytesByType_Share SHARED ShowBytesByType.cpp ShowBytesByType.h)
+INSTALL(FILES ShowBytesByType.h DESTINATION include/ShowBytesByType)
+INSTALL(TARGETS ShowBytesByType_Share LIBRARY DESTINATION lib)
 
