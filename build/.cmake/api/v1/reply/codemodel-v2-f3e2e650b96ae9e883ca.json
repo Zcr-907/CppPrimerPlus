@@ -1,0 +1,146 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						3
+					]
+				},
+				{
+					"build" : "csappBin",
+					"childIndexes" : 
+					[
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-csappBin-Debug-3650125434e5bc9cc014.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "csapp",
+					"targetIndexes" : 
+					[
+						1,
+						2
+					]
+				},
+				{
+					"build" : "csappBin/libBin",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-csappBin.libBin-Debug-5a0bcf921bb6a9c99085.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"parentIndex" : 1,
+					"projectIndex" : 0,
+					"source" : "csapp/lib",
+					"targetIndexes" : 
+					[
+						0,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "CPP_DEV",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 2,
+					"id" : "ShowBytesByType_Share::@ab3a86b6a78c20d5fa28",
+					"jsonFile" : "target-ShowBytesByType_Share-Debug-7dd4a9b3acf956428ba9.json",
+					"name" : "ShowBytesByType_Share",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "chapter02_exc::@f0257a35d7fc199caf6c",
+					"jsonFile" : "target-chapter02_exc-Debug-46bbb3e2c137a6c288c6.json",
+					"name" : "chapter02_exc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "chapter03_exc::@f0257a35d7fc199caf6c",
+					"jsonFile" : "target-chapter03_exc-Debug-9e8aafef3254cbc626df.json",
+					"name" : "chapter03_exc",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "main::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-main-Debug-38181fd91439dacd5a1a.json",
+					"name" : "main",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "printHello_share::@ab3a86b6a78c20d5fa28",
+					"jsonFile" : "target-printHello_share-Debug-a385e0fa5bdfac919eae.json",
+					"name" : "printHello_share",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "printHello_static::@ab3a86b6a78c20d5fa28",
+					"jsonFile" : "target-printHello_static-Debug-1ec8f3cd0b936874f8b0.json",
+					"name" : "printHello_static",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/leilimin/IDEA_ALei/CppPrimerPlus/build",
+		"source" : "/Users/leilimin/IDEA_ALei/CppPrimerPlus"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

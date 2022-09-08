@@ -4,7 +4,7 @@ ADD_EXECUTABLE(chapter02_exc ./chapter02/Chapter2.cpp ./chapter02/S01_BitOffset.
 ADD_EXECUTABLE(chapter03_exc ./chapter03/Chapter3.cpp)
 
 # 设置子模块
-ADD_SUBDIRECTORY(./lib bin)
+ADD_SUBDIRECTORY(./lib libBin)
 
 # 添加头文件搜索路径: 默认从后插入
 INCLUDE_DIRECTORIES(/usr/local/include/hello)
