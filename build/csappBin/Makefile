@@ -285,6 +285,30 @@ chapter03/Chapter3.cpp.s:
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/chapter03/Chapter3.cpp.s
 .PHONY : chapter03/Chapter3.cpp.s
 
+chapter03/S03.o: chapter03/S03.cpp.o
+.PHONY : chapter03/S03.o
+
+# target to build an object file
+chapter03/S03.cpp.o:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/chapter03/S03.cpp.o
+.PHONY : chapter03/S03.cpp.o
+
+chapter03/S03.i: chapter03/S03.cpp.i
+.PHONY : chapter03/S03.i
+
+# target to preprocess a source file
+chapter03/S03.cpp.i:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/chapter03/S03.cpp.i
+.PHONY : chapter03/S03.cpp.i
+
+chapter03/S03.s: chapter03/S03.cpp.s
+.PHONY : chapter03/S03.s
+
+# target to generate assembly for a file
+chapter03/S03.cpp.s:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/chapter03/S03.cpp.s
+.PHONY : chapter03/S03.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -311,6 +335,9 @@ help:
 	@echo "... chapter03/Chapter3.o"
 	@echo "... chapter03/Chapter3.i"
 	@echo "... chapter03/Chapter3.s"
+	@echo "... chapter03/S03.o"
+	@echo "... chapter03/S03.i"
+	@echo "... chapter03/S03.s"
 .PHONY : help
 
 
