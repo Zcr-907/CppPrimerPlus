@@ -1,6 +1,11 @@
 // Created by Zcr on 2022/9/14.
 #include <iostream>
 
+union number {
+    float a;
+    int b;
+};
+
 void test_00() {
     using namespace std;
     // 测试证明: 通过2个同类型的指针相减,可以得到2个指针间距离了X个类型单位的距离
@@ -51,6 +56,16 @@ void test_00() {
      *  : xmm0用来返回浮点值
      *  : 所有的XMM寄存器都为调用者保存
      */
+
+    /**
+     * 联合的使用
+     *  : 与结构不同的是,并不能同时存储多个字段
+     *  : 设置任何一个字段都将独占联合对象的内存地址(替换之前的旧值)
+     *  : 但是可以如以下对相同的值进行不同的数据表示(这里将float使用int来表示,并不想强制转化一样,这里并不会修改bit)
+     */
+    union number num{};
+    num.a = 1.0f;
+    cout << num.b << endl;
 
 
 }
