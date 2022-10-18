@@ -77,15 +77,6 @@ install/local/fast: preinstall/fast
 	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
 .PHONY : install/local/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -105,6 +96,15 @@ edit_cache:
 # Special rule for the target edit_cache
 edit_cache/fast: edit_cache
 .PHONY : edit_cache/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+.PHONY : list_install_components/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -174,6 +174,20 @@ chapter02_exc: csappBin/CMakeFiles/chapter02_exc.dir/rule
 chapter02_exc/fast:
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter02_exc.dir/build.make csappBin/CMakeFiles/chapter02_exc.dir/build
 .PHONY : chapter02_exc/fast
+
+# Convenience name for target.
+csappBin/CMakeFiles/chapter07_exc.dir/rule:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter07_exc.dir/rule
+.PHONY : csappBin/CMakeFiles/chapter07_exc.dir/rule
+
+# Convenience name for target.
+chapter07_exc: csappBin/CMakeFiles/chapter07_exc.dir/rule
+.PHONY : chapter07_exc
+
+# fast build rule for target.
+chapter07_exc/fast:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter07_exc.dir/build.make csappBin/CMakeFiles/chapter07_exc.dir/build
+.PHONY : chapter07_exc/fast
 
 # Convenience name for target.
 csappBin/CMakeFiles/chapter03_exc.dir/rule:
@@ -309,6 +323,54 @@ chapter03/S03.cpp.s:
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/chapter03/S03.cpp.s
 .PHONY : chapter03/S03.cpp.s
 
+chapter07/chapter08_01.o: chapter07/chapter08_01.cpp.o
+.PHONY : chapter07/chapter08_01.o
+
+# target to build an object file
+chapter07/chapter08_01.cpp.o:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter07_exc.dir/build.make csappBin/CMakeFiles/chapter07_exc.dir/chapter07/chapter08_01.cpp.o
+.PHONY : chapter07/chapter08_01.cpp.o
+
+chapter07/chapter08_01.i: chapter07/chapter08_01.cpp.i
+.PHONY : chapter07/chapter08_01.i
+
+# target to preprocess a source file
+chapter07/chapter08_01.cpp.i:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter07_exc.dir/build.make csappBin/CMakeFiles/chapter07_exc.dir/chapter07/chapter08_01.cpp.i
+.PHONY : chapter07/chapter08_01.cpp.i
+
+chapter07/chapter08_01.s: chapter07/chapter08_01.cpp.s
+.PHONY : chapter07/chapter08_01.s
+
+# target to generate assembly for a file
+chapter07/chapter08_01.cpp.s:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter07_exc.dir/build.make csappBin/CMakeFiles/chapter07_exc.dir/chapter07/chapter08_01.cpp.s
+.PHONY : chapter07/chapter08_01.cpp.s
+
+chapter07/chapter08_02.o: chapter07/chapter08_02.cpp.o
+.PHONY : chapter07/chapter08_02.o
+
+# target to build an object file
+chapter07/chapter08_02.cpp.o:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter07_exc.dir/build.make csappBin/CMakeFiles/chapter07_exc.dir/chapter07/chapter08_02.cpp.o
+.PHONY : chapter07/chapter08_02.cpp.o
+
+chapter07/chapter08_02.i: chapter07/chapter08_02.cpp.i
+.PHONY : chapter07/chapter08_02.i
+
+# target to preprocess a source file
+chapter07/chapter08_02.cpp.i:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter07_exc.dir/build.make csappBin/CMakeFiles/chapter07_exc.dir/chapter07/chapter08_02.cpp.i
+.PHONY : chapter07/chapter08_02.cpp.i
+
+chapter07/chapter08_02.s: chapter07/chapter08_02.cpp.s
+.PHONY : chapter07/chapter08_02.s
+
+# target to generate assembly for a file
+chapter07/chapter08_02.cpp.s:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter07_exc.dir/build.make csappBin/CMakeFiles/chapter07_exc.dir/chapter07/chapter08_02.cpp.s
+.PHONY : chapter07/chapter08_02.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -323,6 +385,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... chapter02_exc"
 	@echo "... chapter03_exc"
+	@echo "... chapter07_exc"
 	@echo "... chapter02/Chapter2.o"
 	@echo "... chapter02/Chapter2.i"
 	@echo "... chapter02/Chapter2.s"
@@ -338,6 +401,12 @@ help:
 	@echo "... chapter03/S03.o"
 	@echo "... chapter03/S03.i"
 	@echo "... chapter03/S03.s"
+	@echo "... chapter07/chapter08_01.o"
+	@echo "... chapter07/chapter08_01.i"
+	@echo "... chapter07/chapter08_01.s"
+	@echo "... chapter07/chapter08_02.o"
+	@echo "... chapter07/chapter08_02.i"
+	@echo "... chapter07/chapter08_02.s"
 .PHONY : help
 
 
