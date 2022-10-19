@@ -190,6 +190,20 @@ chapter07_exc/fast:
 .PHONY : chapter07_exc/fast
 
 # Convenience name for target.
+csappBin/CMakeFiles/chapter08_exc.dir/rule:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter08_exc.dir/rule
+.PHONY : csappBin/CMakeFiles/chapter08_exc.dir/rule
+
+# Convenience name for target.
+chapter08_exc: csappBin/CMakeFiles/chapter08_exc.dir/rule
+.PHONY : chapter08_exc
+
+# fast build rule for target.
+chapter08_exc/fast:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter08_exc.dir/build.make csappBin/CMakeFiles/chapter08_exc.dir/build
+.PHONY : chapter08_exc/fast
+
+# Convenience name for target.
 csappBin/CMakeFiles/chapter03_exc.dir/rule:
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter03_exc.dir/rule
 .PHONY : csappBin/CMakeFiles/chapter03_exc.dir/rule
@@ -371,6 +385,30 @@ chapter07/chapter08_02.cpp.s:
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter07_exc.dir/build.make csappBin/CMakeFiles/chapter07_exc.dir/chapter07/chapter08_02.cpp.s
 .PHONY : chapter07/chapter08_02.cpp.s
 
+chapter08/invoke_fork.o: chapter08/invoke_fork.cpp.o
+.PHONY : chapter08/invoke_fork.o
+
+# target to build an object file
+chapter08/invoke_fork.cpp.o:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter08_exc.dir/build.make csappBin/CMakeFiles/chapter08_exc.dir/chapter08/invoke_fork.cpp.o
+.PHONY : chapter08/invoke_fork.cpp.o
+
+chapter08/invoke_fork.i: chapter08/invoke_fork.cpp.i
+.PHONY : chapter08/invoke_fork.i
+
+# target to preprocess a source file
+chapter08/invoke_fork.cpp.i:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter08_exc.dir/build.make csappBin/CMakeFiles/chapter08_exc.dir/chapter08/invoke_fork.cpp.i
+.PHONY : chapter08/invoke_fork.cpp.i
+
+chapter08/invoke_fork.s: chapter08/invoke_fork.cpp.s
+.PHONY : chapter08/invoke_fork.s
+
+# target to generate assembly for a file
+chapter08/invoke_fork.cpp.s:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter08_exc.dir/build.make csappBin/CMakeFiles/chapter08_exc.dir/chapter08/invoke_fork.cpp.s
+.PHONY : chapter08/invoke_fork.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -386,6 +424,7 @@ help:
 	@echo "... chapter02_exc"
 	@echo "... chapter03_exc"
 	@echo "... chapter07_exc"
+	@echo "... chapter08_exc"
 	@echo "... chapter02/Chapter2.o"
 	@echo "... chapter02/Chapter2.i"
 	@echo "... chapter02/Chapter2.s"
@@ -407,6 +446,9 @@ help:
 	@echo "... chapter07/chapter08_02.o"
 	@echo "... chapter07/chapter08_02.i"
 	@echo "... chapter07/chapter08_02.s"
+	@echo "... chapter08/invoke_fork.o"
+	@echo "... chapter08/invoke_fork.i"
+	@echo "... chapter08/invoke_fork.s"
 .PHONY : help
 
 
