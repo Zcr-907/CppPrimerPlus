@@ -175,17 +175,17 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
-# Target rules for targets named chapter02_exc
+# Target rules for targets named unit_exec
 
 # Build rule for target.
-chapter02_exc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chapter02_exc
-.PHONY : chapter02_exc
+unit_exec: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 unit_exec
+.PHONY : unit_exec
 
 # fast build rule for target.
-chapter02_exc/fast:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter02_exc.dir/build.make csappBin/CMakeFiles/chapter02_exc.dir/build
-.PHONY : chapter02_exc/fast
+unit_exec/fast:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/unit_exec.dir/build.make csappBin/CMakeFiles/unit_exec.dir/build
+.PHONY : unit_exec/fast
 
 #=============================================================================
 # Target rules for targets named chapter07_exc
@@ -225,6 +225,19 @@ chapter03_exc: cmake_check_build_system
 chapter03_exc/fast:
 	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/build
 .PHONY : chapter03_exc/fast
+
+#=============================================================================
+# Target rules for targets named chapter02_exc
+
+# Build rule for target.
+chapter02_exc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chapter02_exc
+.PHONY : chapter02_exc
+
+# fast build rule for target.
+chapter02_exc/fast:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter02_exc.dir/build.make csappBin/CMakeFiles/chapter02_exc.dir/build
+.PHONY : chapter02_exc/fast
 
 #=============================================================================
 # Target rules for targets named printHello_share
@@ -309,6 +322,7 @@ help:
 	@echo "... main"
 	@echo "... printHello_share"
 	@echo "... printHello_static"
+	@echo "... unit_exec"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

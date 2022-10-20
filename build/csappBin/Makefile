@@ -87,16 +87,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
-
 # Special rule for the target list_install_components
 list_install_components:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
@@ -130,6 +120,16 @@ install/fast: preinstall/fast
 	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
+
 # The main all target
 all: cmake_check_build_system
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/csappBin//CMakeFiles/progress.marks
@@ -162,18 +162,18 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-csappBin/CMakeFiles/chapter02_exc.dir/rule:
-	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter02_exc.dir/rule
-.PHONY : csappBin/CMakeFiles/chapter02_exc.dir/rule
+csappBin/CMakeFiles/unit_exec.dir/rule:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/unit_exec.dir/rule
+.PHONY : csappBin/CMakeFiles/unit_exec.dir/rule
 
 # Convenience name for target.
-chapter02_exc: csappBin/CMakeFiles/chapter02_exc.dir/rule
-.PHONY : chapter02_exc
+unit_exec: csappBin/CMakeFiles/unit_exec.dir/rule
+.PHONY : unit_exec
 
 # fast build rule for target.
-chapter02_exc/fast:
-	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter02_exc.dir/build.make csappBin/CMakeFiles/chapter02_exc.dir/build
-.PHONY : chapter02_exc/fast
+unit_exec/fast:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/unit_exec.dir/build.make csappBin/CMakeFiles/unit_exec.dir/build
+.PHONY : unit_exec/fast
 
 # Convenience name for target.
 csappBin/CMakeFiles/chapter07_exc.dir/rule:
@@ -216,6 +216,20 @@ chapter03_exc: csappBin/CMakeFiles/chapter03_exc.dir/rule
 chapter03_exc/fast:
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/build
 .PHONY : chapter03_exc/fast
+
+# Convenience name for target.
+csappBin/CMakeFiles/chapter02_exc.dir/rule:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter02_exc.dir/rule
+.PHONY : csappBin/CMakeFiles/chapter02_exc.dir/rule
+
+# Convenience name for target.
+chapter02_exc: csappBin/CMakeFiles/chapter02_exc.dir/rule
+.PHONY : chapter02_exc
+
+# fast build rule for target.
+chapter02_exc/fast:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter02_exc.dir/build.make csappBin/CMakeFiles/chapter02_exc.dir/build
+.PHONY : chapter02_exc/fast
 
 chapter02/Chapter2.o: chapter02/Chapter2.cpp.o
 .PHONY : chapter02/Chapter2.o
@@ -409,6 +423,30 @@ chapter08/invoke_fork.cpp.s:
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter08_exc.dir/build.make csappBin/CMakeFiles/chapter08_exc.dir/chapter08/invoke_fork.cpp.s
 .PHONY : chapter08/invoke_fork.cpp.s
 
+unit/test.o: unit/test.cpp.o
+.PHONY : unit/test.o
+
+# target to build an object file
+unit/test.cpp.o:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/unit_exec.dir/build.make csappBin/CMakeFiles/unit_exec.dir/unit/test.cpp.o
+.PHONY : unit/test.cpp.o
+
+unit/test.i: unit/test.cpp.i
+.PHONY : unit/test.i
+
+# target to preprocess a source file
+unit/test.cpp.i:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/unit_exec.dir/build.make csappBin/CMakeFiles/unit_exec.dir/unit/test.cpp.i
+.PHONY : unit/test.cpp.i
+
+unit/test.s: unit/test.cpp.s
+.PHONY : unit/test.s
+
+# target to generate assembly for a file
+unit/test.cpp.s:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/unit_exec.dir/build.make csappBin/CMakeFiles/unit_exec.dir/unit/test.cpp.s
+.PHONY : unit/test.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -425,6 +463,7 @@ help:
 	@echo "... chapter03_exc"
 	@echo "... chapter07_exc"
 	@echo "... chapter08_exc"
+	@echo "... unit_exec"
 	@echo "... chapter02/Chapter2.o"
 	@echo "... chapter02/Chapter2.i"
 	@echo "... chapter02/Chapter2.s"
@@ -449,6 +488,9 @@ help:
 	@echo "... chapter08/invoke_fork.o"
 	@echo "... chapter08/invoke_fork.i"
 	@echo "... chapter08/invoke_fork.s"
+	@echo "... unit/test.o"
+	@echo "... unit/test.i"
+	@echo "... unit/test.s"
 .PHONY : help
 
 
