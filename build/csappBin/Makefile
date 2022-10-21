@@ -65,6 +65,18 @@ CMAKE_BINARY_DIR = /Users/leilimin/IDEA_ALei/CppPrimerPlus/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -95,18 +107,6 @@ list_install_components:
 # Special rule for the target list_install_components
 list_install_components/fast: list_install_components
 .PHONY : list_install_components/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
 
 # Special rule for the target install
 install: preinstall
@@ -162,6 +162,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+csappBin/CMakeFiles/chapter03_exc.dir/rule:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter03_exc.dir/rule
+.PHONY : csappBin/CMakeFiles/chapter03_exc.dir/rule
+
+# Convenience name for target.
+chapter03_exc: csappBin/CMakeFiles/chapter03_exc.dir/rule
+.PHONY : chapter03_exc
+
+# fast build rule for target.
+chapter03_exc/fast:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/build
+.PHONY : chapter03_exc/fast
+
+# Convenience name for target.
 csappBin/CMakeFiles/unit_exec.dir/rule:
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/unit_exec.dir/rule
 .PHONY : csappBin/CMakeFiles/unit_exec.dir/rule
@@ -190,6 +204,20 @@ chapter07_exc/fast:
 .PHONY : chapter07_exc/fast
 
 # Convenience name for target.
+csappBin/CMakeFiles/chapter09_exc.dir/rule:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter09_exc.dir/rule
+.PHONY : csappBin/CMakeFiles/chapter09_exc.dir/rule
+
+# Convenience name for target.
+chapter09_exc: csappBin/CMakeFiles/chapter09_exc.dir/rule
+.PHONY : chapter09_exc
+
+# fast build rule for target.
+chapter09_exc/fast:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter09_exc.dir/build.make csappBin/CMakeFiles/chapter09_exc.dir/build
+.PHONY : chapter09_exc/fast
+
+# Convenience name for target.
 csappBin/CMakeFiles/chapter08_exc.dir/rule:
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter08_exc.dir/rule
 .PHONY : csappBin/CMakeFiles/chapter08_exc.dir/rule
@@ -202,20 +230,6 @@ chapter08_exc: csappBin/CMakeFiles/chapter08_exc.dir/rule
 chapter08_exc/fast:
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter08_exc.dir/build.make csappBin/CMakeFiles/chapter08_exc.dir/build
 .PHONY : chapter08_exc/fast
-
-# Convenience name for target.
-csappBin/CMakeFiles/chapter03_exc.dir/rule:
-	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter03_exc.dir/rule
-.PHONY : csappBin/CMakeFiles/chapter03_exc.dir/rule
-
-# Convenience name for target.
-chapter03_exc: csappBin/CMakeFiles/chapter03_exc.dir/rule
-.PHONY : chapter03_exc
-
-# fast build rule for target.
-chapter03_exc/fast:
-	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/build
-.PHONY : chapter03_exc/fast
 
 # Convenience name for target.
 csappBin/CMakeFiles/chapter02_exc.dir/rule:
@@ -423,6 +437,30 @@ chapter08/invoke_fork.cpp.s:
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter08_exc.dir/build.make csappBin/CMakeFiles/chapter08_exc.dir/chapter08/invoke_fork.cpp.s
 .PHONY : chapter08/invoke_fork.cpp.s
 
+chapter09/main.o: chapter09/main.cpp.o
+.PHONY : chapter09/main.o
+
+# target to build an object file
+chapter09/main.cpp.o:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter09_exc.dir/build.make csappBin/CMakeFiles/chapter09_exc.dir/chapter09/main.cpp.o
+.PHONY : chapter09/main.cpp.o
+
+chapter09/main.i: chapter09/main.cpp.i
+.PHONY : chapter09/main.i
+
+# target to preprocess a source file
+chapter09/main.cpp.i:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter09_exc.dir/build.make csappBin/CMakeFiles/chapter09_exc.dir/chapter09/main.cpp.i
+.PHONY : chapter09/main.cpp.i
+
+chapter09/main.s: chapter09/main.cpp.s
+.PHONY : chapter09/main.s
+
+# target to generate assembly for a file
+chapter09/main.cpp.s:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter09_exc.dir/build.make csappBin/CMakeFiles/chapter09_exc.dir/chapter09/main.cpp.s
+.PHONY : chapter09/main.cpp.s
+
 unit/test.o: unit/test.cpp.o
 .PHONY : unit/test.o
 
@@ -463,6 +501,7 @@ help:
 	@echo "... chapter03_exc"
 	@echo "... chapter07_exc"
 	@echo "... chapter08_exc"
+	@echo "... chapter09_exc"
 	@echo "... unit_exec"
 	@echo "... chapter02/Chapter2.o"
 	@echo "... chapter02/Chapter2.i"
@@ -488,6 +527,9 @@ help:
 	@echo "... chapter08/invoke_fork.o"
 	@echo "... chapter08/invoke_fork.i"
 	@echo "... chapter08/invoke_fork.s"
+	@echo "... chapter09/main.o"
+	@echo "... chapter09/main.i"
+	@echo "... chapter09/main.s"
 	@echo "... unit/test.o"
 	@echo "... unit/test.i"
 	@echo "... unit/test.s"

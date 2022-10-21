@@ -175,6 +175,19 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
+# Target rules for targets named chapter03_exc
+
+# Build rule for target.
+chapter03_exc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chapter03_exc
+.PHONY : chapter03_exc
+
+# fast build rule for target.
+chapter03_exc/fast:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/build
+.PHONY : chapter03_exc/fast
+
+#=============================================================================
 # Target rules for targets named unit_exec
 
 # Build rule for target.
@@ -201,6 +214,19 @@ chapter07_exc/fast:
 .PHONY : chapter07_exc/fast
 
 #=============================================================================
+# Target rules for targets named chapter09_exc
+
+# Build rule for target.
+chapter09_exc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chapter09_exc
+.PHONY : chapter09_exc
+
+# fast build rule for target.
+chapter09_exc/fast:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter09_exc.dir/build.make csappBin/CMakeFiles/chapter09_exc.dir/build
+.PHONY : chapter09_exc/fast
+
+#=============================================================================
 # Target rules for targets named chapter08_exc
 
 # Build rule for target.
@@ -212,19 +238,6 @@ chapter08_exc: cmake_check_build_system
 chapter08_exc/fast:
 	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter08_exc.dir/build.make csappBin/CMakeFiles/chapter08_exc.dir/build
 .PHONY : chapter08_exc/fast
-
-#=============================================================================
-# Target rules for targets named chapter03_exc
-
-# Build rule for target.
-chapter03_exc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chapter03_exc
-.PHONY : chapter03_exc
-
-# fast build rule for target.
-chapter03_exc/fast:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/build
-.PHONY : chapter03_exc/fast
 
 #=============================================================================
 # Target rules for targets named chapter02_exc
@@ -319,6 +332,7 @@ help:
 	@echo "... chapter03_exc"
 	@echo "... chapter07_exc"
 	@echo "... chapter08_exc"
+	@echo "... chapter09_exc"
 	@echo "... main"
 	@echo "... printHello_share"
 	@echo "... printHello_static"
