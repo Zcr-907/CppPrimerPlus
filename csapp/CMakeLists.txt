@@ -2,7 +2,7 @@
 #               ./chapter02/Chapter2.cpp ./chapter02/S01_BitOffset.cpp ./chapter02/S02_ShowBytes.cpp > 构建目标依赖项
 ADD_EXECUTABLE(chapter02_exc ./chapter02/Chapter2.cpp ./chapter02/S01_BitOffset.cpp ./chapter02/S02_ShowBytes.cpp)
 ADD_EXECUTABLE(chapter03_exc ./chapter03/Chapter3.cpp ./chapter03/S03.cpp)
-ADD_EXECUTABLE(chapter07_exc ./chapter07/chapter08_01.cpp ./chapter07/chapter08_02.cpp)
+ADD_EXECUTABLE(chapter07_exc chapter07/chapter07_01.cpp chapter07/chapter07_02.cpp)
 ADD_EXECUTABLE(chapter08_exc ./chapter08/invoke_fork.cpp )
 ADD_EXECUTABLE(chapter09_exc ./chapter09/main.cpp )
 
