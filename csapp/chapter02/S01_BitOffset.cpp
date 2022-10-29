@@ -15,6 +15,16 @@ void lab01() {
     for (int j = 0; j >= i; j--) {
         cout << j << endl;
     }
+
+    /**
+     * 问题1:
+     *  (int a >> 0XFF): 保留低八位的值
+     *  (char b>> 0XFF): 保留低八位的值,并且将char向上转型为int
+     *                   目的是char无论表示的是负数还是正数,因为向上转型,当前值的补码表示为正数的补码
+     *  (char) (1 & 0XFF): 问题描述 > char直接截断了int的第八位,&0XFF也是取出第八位,那么为什么不直接使用(char)int?
+     *                     解释    >
+     */
+    int i_int = (char) (1 & 0XFF);
 }
 
 
