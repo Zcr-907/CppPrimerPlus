@@ -291,6 +291,19 @@ printHello_static/fast:
 	$(MAKE) $(MAKESILENT) -f csappBin/libBin/CMakeFiles/printHello_static.dir/build.make csappBin/libBin/CMakeFiles/printHello_static.dir/build
 .PHONY : printHello_static/fast
 
+#=============================================================================
+# Target rules for targets named lkd_03
+
+# Build rule for target.
+lkd_03: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lkd_03
+.PHONY : lkd_03
+
+# fast build rule for target.
+lkd_03/fast:
+	$(MAKE) $(MAKESILENT) -f linuxBin/CMakeFiles/lkd_03.dir/build.make linuxBin/CMakeFiles/lkd_03.dir/build
+.PHONY : lkd_03/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -333,6 +346,7 @@ help:
 	@echo "... chapter07_exc"
 	@echo "... chapter08_exc"
 	@echo "... chapter09_exc"
+	@echo "... lkd_03"
 	@echo "... main"
 	@echo "... printHello_share"
 	@echo "... printHello_static"

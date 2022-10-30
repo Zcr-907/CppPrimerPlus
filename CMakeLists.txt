@@ -14,6 +14,8 @@ add_executable(main main.cpp)
 # 设置子模块: arg1 > 源码树位置,使用当前CMakeLists.txt所在位置的相对路径
 #           arg2 > 指定构建树路径,使用相对路径
 ADD_SUBDIRECTORY(csapp csappBin)
+ADD_SUBDIRECTORY(LinuxKernel/LinuxKernelDevelopment linuxBin)
+
 
 # ==================================================================================================================
 #[[
