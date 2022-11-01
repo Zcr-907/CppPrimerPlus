@@ -3,7 +3,8 @@
 ADD_EXECUTABLE(csapp_02_01exc ./chapter02/Chapter2.cpp ./chapter02/S01_BitOffset.cpp ./chapter02/S02_ShowBytes.cpp)
 ADD_EXECUTABLE(csapp_03_01exc ./chapter03/Chapter3.cpp ./chapter03/S03.cpp)
 ADD_EXECUTABLE(csapp_07_01exc ./chapter07/chapter07_01.cpp chapter07/chapter07_02.cpp)
-ADD_EXECUTABLE(csapp_08_01exc ./chapter08/Fork.cpp)
+ADD_EXECUTABLE(csapp_08_Fork ./chapter08/Fork.cpp)
+ADD_EXECUTABLE(csapp_08_Recycle ./chapter08/RecycleChildProcess.cpp)
 ADD_EXECUTABLE(csapp_09_01exc ./chapter09/main.cpp)
 
 ADD_EXECUTABLE(unit_exec ./unit/test.cpp)

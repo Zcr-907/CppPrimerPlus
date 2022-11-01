@@ -175,6 +175,32 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
+# Target rules for targets named csapp_03_01exc
+
+# Build rule for target.
+csapp_03_01exc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csapp_03_01exc
+.PHONY : csapp_03_01exc
+
+# fast build rule for target.
+csapp_03_01exc/fast:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_03_01exc.dir/build.make csappBin/CMakeFiles/csapp_03_01exc.dir/build
+.PHONY : csapp_03_01exc/fast
+
+#=============================================================================
+# Target rules for targets named csapp_08_Recycle
+
+# Build rule for target.
+csapp_08_Recycle: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csapp_08_Recycle
+.PHONY : csapp_08_Recycle
+
+# fast build rule for target.
+csapp_08_Recycle/fast:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_Recycle.dir/build.make csappBin/CMakeFiles/csapp_08_Recycle.dir/build
+.PHONY : csapp_08_Recycle/fast
+
+#=============================================================================
 # Target rules for targets named unit_exec
 
 # Build rule for target.
@@ -214,17 +240,17 @@ csapp_09_01exc/fast:
 .PHONY : csapp_09_01exc/fast
 
 #=============================================================================
-# Target rules for targets named csapp_08_01exc
+# Target rules for targets named csapp_08_Fork
 
 # Build rule for target.
-csapp_08_01exc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csapp_08_01exc
-.PHONY : csapp_08_01exc
+csapp_08_Fork: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csapp_08_Fork
+.PHONY : csapp_08_Fork
 
 # fast build rule for target.
-csapp_08_01exc/fast:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_01exc.dir/build.make csappBin/CMakeFiles/csapp_08_01exc.dir/build
-.PHONY : csapp_08_01exc/fast
+csapp_08_Fork/fast:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_Fork.dir/build.make csappBin/CMakeFiles/csapp_08_Fork.dir/build
+.PHONY : csapp_08_Fork/fast
 
 #=============================================================================
 # Target rules for targets named csapp_07_01exc
@@ -238,19 +264,6 @@ csapp_07_01exc: cmake_check_build_system
 csapp_07_01exc/fast:
 	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_07_01exc.dir/build.make csappBin/CMakeFiles/csapp_07_01exc.dir/build
 .PHONY : csapp_07_01exc/fast
-
-#=============================================================================
-# Target rules for targets named csapp_03_01exc
-
-# Build rule for target.
-csapp_03_01exc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csapp_03_01exc
-.PHONY : csapp_03_01exc
-
-# fast build rule for target.
-csapp_03_01exc/fast:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_03_01exc.dir/build.make csappBin/CMakeFiles/csapp_03_01exc.dir/build
-.PHONY : csapp_03_01exc/fast
 
 #=============================================================================
 # Target rules for targets named printHello_share
@@ -344,7 +357,8 @@ help:
 	@echo "... csapp_02_01exc"
 	@echo "... csapp_03_01exc"
 	@echo "... csapp_07_01exc"
-	@echo "... csapp_08_01exc"
+	@echo "... csapp_08_Fork"
+	@echo "... csapp_08_Recycle"
 	@echo "... csapp_09_01exc"
 	@echo "... lkd_03"
 	@echo "... main"

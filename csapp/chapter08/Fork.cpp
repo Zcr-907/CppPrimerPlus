@@ -1,5 +1,6 @@
 #include <unistd.h>
 #include <cstdio>
+#include <stdlib.h>
 
 /**
  * 异常控制流:
@@ -23,6 +24,7 @@ int main() {
      *              parent : x=0
      *              child : x=2
      * sleep(1): 防止当前main线程过早消亡,然后child被init线程托管
+     * _exit(0): 终止进程
      */
     pid_t fork_id = fork();
     int x = 1;

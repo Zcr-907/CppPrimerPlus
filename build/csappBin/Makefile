@@ -65,6 +65,18 @@ CMAKE_BINARY_DIR = /Users/leilimin/IDEA_ALei/CppPrimerPlus/build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
+
 # Special rule for the target install
 install: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
@@ -96,28 +108,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-.PHONY : edit_cache/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
 # Special rule for the target install/strip
 install/strip: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
@@ -129,6 +119,16 @@ install/strip/fast: preinstall/fast
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
 	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+.PHONY : edit_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -160,6 +160,34 @@ preinstall/fast:
 depend:
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+# Convenience name for target.
+csappBin/CMakeFiles/csapp_03_01exc.dir/rule:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/csapp_03_01exc.dir/rule
+.PHONY : csappBin/CMakeFiles/csapp_03_01exc.dir/rule
+
+# Convenience name for target.
+csapp_03_01exc: csappBin/CMakeFiles/csapp_03_01exc.dir/rule
+.PHONY : csapp_03_01exc
+
+# fast build rule for target.
+csapp_03_01exc/fast:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_03_01exc.dir/build.make csappBin/CMakeFiles/csapp_03_01exc.dir/build
+.PHONY : csapp_03_01exc/fast
+
+# Convenience name for target.
+csappBin/CMakeFiles/csapp_08_Recycle.dir/rule:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/csapp_08_Recycle.dir/rule
+.PHONY : csappBin/CMakeFiles/csapp_08_Recycle.dir/rule
+
+# Convenience name for target.
+csapp_08_Recycle: csappBin/CMakeFiles/csapp_08_Recycle.dir/rule
+.PHONY : csapp_08_Recycle
+
+# fast build rule for target.
+csapp_08_Recycle/fast:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_Recycle.dir/build.make csappBin/CMakeFiles/csapp_08_Recycle.dir/build
+.PHONY : csapp_08_Recycle/fast
 
 # Convenience name for target.
 csappBin/CMakeFiles/unit_exec.dir/rule:
@@ -204,18 +232,18 @@ csapp_09_01exc/fast:
 .PHONY : csapp_09_01exc/fast
 
 # Convenience name for target.
-csappBin/CMakeFiles/csapp_08_01exc.dir/rule:
-	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/csapp_08_01exc.dir/rule
-.PHONY : csappBin/CMakeFiles/csapp_08_01exc.dir/rule
+csappBin/CMakeFiles/csapp_08_Fork.dir/rule:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/csapp_08_Fork.dir/rule
+.PHONY : csappBin/CMakeFiles/csapp_08_Fork.dir/rule
 
 # Convenience name for target.
-csapp_08_01exc: csappBin/CMakeFiles/csapp_08_01exc.dir/rule
-.PHONY : csapp_08_01exc
+csapp_08_Fork: csappBin/CMakeFiles/csapp_08_Fork.dir/rule
+.PHONY : csapp_08_Fork
 
 # fast build rule for target.
-csapp_08_01exc/fast:
-	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_01exc.dir/build.make csappBin/CMakeFiles/csapp_08_01exc.dir/build
-.PHONY : csapp_08_01exc/fast
+csapp_08_Fork/fast:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_Fork.dir/build.make csappBin/CMakeFiles/csapp_08_Fork.dir/build
+.PHONY : csapp_08_Fork/fast
 
 # Convenience name for target.
 csappBin/CMakeFiles/csapp_07_01exc.dir/rule:
@@ -230,20 +258,6 @@ csapp_07_01exc: csappBin/CMakeFiles/csapp_07_01exc.dir/rule
 csapp_07_01exc/fast:
 	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_07_01exc.dir/build.make csappBin/CMakeFiles/csapp_07_01exc.dir/build
 .PHONY : csapp_07_01exc/fast
-
-# Convenience name for target.
-csappBin/CMakeFiles/csapp_03_01exc.dir/rule:
-	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/csapp_03_01exc.dir/rule
-.PHONY : csappBin/CMakeFiles/csapp_03_01exc.dir/rule
-
-# Convenience name for target.
-csapp_03_01exc: csappBin/CMakeFiles/csapp_03_01exc.dir/rule
-.PHONY : csapp_03_01exc
-
-# fast build rule for target.
-csapp_03_01exc/fast:
-	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_03_01exc.dir/build.make csappBin/CMakeFiles/csapp_03_01exc.dir/build
-.PHONY : csapp_03_01exc/fast
 
 chapter02/Chapter2.o: chapter02/Chapter2.cpp.o
 .PHONY : chapter02/Chapter2.o
@@ -418,7 +432,7 @@ chapter08/Fork.o: chapter08/Fork.cpp.o
 
 # target to build an object file
 chapter08/Fork.cpp.o:
-	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_01exc.dir/build.make csappBin/CMakeFiles/csapp_08_01exc.dir/chapter08/Fork.cpp.o
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_Fork.dir/build.make csappBin/CMakeFiles/csapp_08_Fork.dir/chapter08/Fork.cpp.o
 .PHONY : chapter08/Fork.cpp.o
 
 chapter08/Fork.i: chapter08/Fork.cpp.i
@@ -426,7 +440,7 @@ chapter08/Fork.i: chapter08/Fork.cpp.i
 
 # target to preprocess a source file
 chapter08/Fork.cpp.i:
-	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_01exc.dir/build.make csappBin/CMakeFiles/csapp_08_01exc.dir/chapter08/Fork.cpp.i
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_Fork.dir/build.make csappBin/CMakeFiles/csapp_08_Fork.dir/chapter08/Fork.cpp.i
 .PHONY : chapter08/Fork.cpp.i
 
 chapter08/Fork.s: chapter08/Fork.cpp.s
@@ -434,8 +448,32 @@ chapter08/Fork.s: chapter08/Fork.cpp.s
 
 # target to generate assembly for a file
 chapter08/Fork.cpp.s:
-	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_01exc.dir/build.make csappBin/CMakeFiles/csapp_08_01exc.dir/chapter08/Fork.cpp.s
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_Fork.dir/build.make csappBin/CMakeFiles/csapp_08_Fork.dir/chapter08/Fork.cpp.s
 .PHONY : chapter08/Fork.cpp.s
+
+chapter08/RecycleChildProcess.o: chapter08/RecycleChildProcess.cpp.o
+.PHONY : chapter08/RecycleChildProcess.o
+
+# target to build an object file
+chapter08/RecycleChildProcess.cpp.o:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_Recycle.dir/build.make csappBin/CMakeFiles/csapp_08_Recycle.dir/chapter08/RecycleChildProcess.cpp.o
+.PHONY : chapter08/RecycleChildProcess.cpp.o
+
+chapter08/RecycleChildProcess.i: chapter08/RecycleChildProcess.cpp.i
+.PHONY : chapter08/RecycleChildProcess.i
+
+# target to preprocess a source file
+chapter08/RecycleChildProcess.cpp.i:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_Recycle.dir/build.make csappBin/CMakeFiles/csapp_08_Recycle.dir/chapter08/RecycleChildProcess.cpp.i
+.PHONY : chapter08/RecycleChildProcess.cpp.i
+
+chapter08/RecycleChildProcess.s: chapter08/RecycleChildProcess.cpp.s
+.PHONY : chapter08/RecycleChildProcess.s
+
+# target to generate assembly for a file
+chapter08/RecycleChildProcess.cpp.s:
+	cd /Users/leilimin/IDEA_ALei/CppPrimerPlus/build && $(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_Recycle.dir/build.make csappBin/CMakeFiles/csapp_08_Recycle.dir/chapter08/RecycleChildProcess.cpp.s
+.PHONY : chapter08/RecycleChildProcess.cpp.s
 
 chapter09/main.o: chapter09/main.cpp.o
 .PHONY : chapter09/main.o
@@ -500,7 +538,8 @@ help:
 	@echo "... csapp_02_01exc"
 	@echo "... csapp_03_01exc"
 	@echo "... csapp_07_01exc"
-	@echo "... csapp_08_01exc"
+	@echo "... csapp_08_Fork"
+	@echo "... csapp_08_Recycle"
 	@echo "... csapp_09_01exc"
 	@echo "... unit_exec"
 	@echo "... chapter02/Chapter2.o"
@@ -527,6 +566,9 @@ help:
 	@echo "... chapter08/Fork.o"
 	@echo "... chapter08/Fork.i"
 	@echo "... chapter08/Fork.s"
+	@echo "... chapter08/RecycleChildProcess.o"
+	@echo "... chapter08/RecycleChildProcess.i"
+	@echo "... chapter08/RecycleChildProcess.s"
 	@echo "... chapter09/main.o"
 	@echo "... chapter09/main.i"
 	@echo "... chapter09/main.s"
