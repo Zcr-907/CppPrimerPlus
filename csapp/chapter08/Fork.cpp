@@ -22,7 +22,7 @@ int main() {
      *          对于虚拟内存地址,内存地址看起来是相同的,因为并不是实际的物理内存地址
      *          所以输出如下
      *              parent : x=0
-     *              child : x=2
+     *              child  : x=2
      * sleep(1): 防止当前main线程过早消亡,然后child被init线程托管
      * _exit(0): 终止进程
      */
