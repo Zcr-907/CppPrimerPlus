@@ -175,19 +175,6 @@ main/fast:
 .PHONY : main/fast
 
 #=============================================================================
-# Target rules for targets named chapter03_exc
-
-# Build rule for target.
-chapter03_exc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chapter03_exc
-.PHONY : chapter03_exc
-
-# fast build rule for target.
-chapter03_exc/fast:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/build
-.PHONY : chapter03_exc/fast
-
-#=============================================================================
 # Target rules for targets named unit_exec
 
 # Build rule for target.
@@ -201,56 +188,69 @@ unit_exec/fast:
 .PHONY : unit_exec/fast
 
 #=============================================================================
-# Target rules for targets named chapter07_exc
+# Target rules for targets named csapp_02_01exc
 
 # Build rule for target.
-chapter07_exc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chapter07_exc
-.PHONY : chapter07_exc
+csapp_02_01exc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csapp_02_01exc
+.PHONY : csapp_02_01exc
 
 # fast build rule for target.
-chapter07_exc/fast:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter07_exc.dir/build.make csappBin/CMakeFiles/chapter07_exc.dir/build
-.PHONY : chapter07_exc/fast
+csapp_02_01exc/fast:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_02_01exc.dir/build.make csappBin/CMakeFiles/csapp_02_01exc.dir/build
+.PHONY : csapp_02_01exc/fast
 
 #=============================================================================
-# Target rules for targets named chapter09_exc
+# Target rules for targets named csapp_09_01exc
 
 # Build rule for target.
-chapter09_exc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chapter09_exc
-.PHONY : chapter09_exc
+csapp_09_01exc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csapp_09_01exc
+.PHONY : csapp_09_01exc
 
 # fast build rule for target.
-chapter09_exc/fast:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter09_exc.dir/build.make csappBin/CMakeFiles/chapter09_exc.dir/build
-.PHONY : chapter09_exc/fast
+csapp_09_01exc/fast:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_09_01exc.dir/build.make csappBin/CMakeFiles/csapp_09_01exc.dir/build
+.PHONY : csapp_09_01exc/fast
 
 #=============================================================================
-# Target rules for targets named chapter08_exc
+# Target rules for targets named csapp_08_01exc
 
 # Build rule for target.
-chapter08_exc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chapter08_exc
-.PHONY : chapter08_exc
+csapp_08_01exc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csapp_08_01exc
+.PHONY : csapp_08_01exc
 
 # fast build rule for target.
-chapter08_exc/fast:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter08_exc.dir/build.make csappBin/CMakeFiles/chapter08_exc.dir/build
-.PHONY : chapter08_exc/fast
+csapp_08_01exc/fast:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_01exc.dir/build.make csappBin/CMakeFiles/csapp_08_01exc.dir/build
+.PHONY : csapp_08_01exc/fast
 
 #=============================================================================
-# Target rules for targets named chapter02_exc
+# Target rules for targets named csapp_07_01exc
 
 # Build rule for target.
-chapter02_exc: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chapter02_exc
-.PHONY : chapter02_exc
+csapp_07_01exc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csapp_07_01exc
+.PHONY : csapp_07_01exc
 
 # fast build rule for target.
-chapter02_exc/fast:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter02_exc.dir/build.make csappBin/CMakeFiles/chapter02_exc.dir/build
-.PHONY : chapter02_exc/fast
+csapp_07_01exc/fast:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_07_01exc.dir/build.make csappBin/CMakeFiles/csapp_07_01exc.dir/build
+.PHONY : csapp_07_01exc/fast
+
+#=============================================================================
+# Target rules for targets named csapp_03_01exc
+
+# Build rule for target.
+csapp_03_01exc: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csapp_03_01exc
+.PHONY : csapp_03_01exc
+
+# fast build rule for target.
+csapp_03_01exc/fast:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_03_01exc.dir/build.make csappBin/CMakeFiles/csapp_03_01exc.dir/build
+.PHONY : csapp_03_01exc/fast
 
 #=============================================================================
 # Target rules for targets named printHello_share
@@ -341,11 +341,11 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... ShowBytesByType_Share"
-	@echo "... chapter02_exc"
-	@echo "... chapter03_exc"
-	@echo "... chapter07_exc"
-	@echo "... chapter08_exc"
-	@echo "... chapter09_exc"
+	@echo "... csapp_02_01exc"
+	@echo "... csapp_03_01exc"
+	@echo "... csapp_07_01exc"
+	@echo "... csapp_08_01exc"
+	@echo "... csapp_09_01exc"
 	@echo "... lkd_03"
 	@echo "... main"
 	@echo "... printHello_share"

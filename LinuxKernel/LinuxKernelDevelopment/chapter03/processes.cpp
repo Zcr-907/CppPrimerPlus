@@ -1,9 +1,9 @@
 // Created by Zcr on 2022/10/30.
 
-#include <stdio.h>
-#include <sched.h>
-#include <thread>
+#include <cstdio>
+#include <unistd.h>
+#include <pthread.h>
 
-int main(void){
-    printf("Hello");
+int main() {
+
 }

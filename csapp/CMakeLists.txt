@@ -1,12 +1,12 @@
 # 构建可执行文件: chapter02_exc > target
 #               ./chapter02/Chapter2.cpp ./chapter02/S01_BitOffset.cpp ./chapter02/S02_ShowBytes.cpp > 构建目标依赖项
-ADD_EXECUTABLE(chapter02_exc ./chapter02/Chapter2.cpp ./chapter02/S01_BitOffset.cpp ./chapter02/S02_ShowBytes.cpp)
-ADD_EXECUTABLE(chapter03_exc ./chapter03/Chapter3.cpp ./chapter03/S03.cpp)
-ADD_EXECUTABLE(chapter07_exc chapter07/chapter07_01.cpp chapter07/chapter07_02.cpp)
-ADD_EXECUTABLE(chapter08_exc ./chapter08/invoke_fork.cpp )
-ADD_EXECUTABLE(chapter09_exc ./chapter09/main.cpp )
+ADD_EXECUTABLE(csapp_02_01exc ./chapter02/Chapter2.cpp ./chapter02/S01_BitOffset.cpp ./chapter02/S02_ShowBytes.cpp)
+ADD_EXECUTABLE(csapp_03_01exc ./chapter03/Chapter3.cpp ./chapter03/S03.cpp)
+ADD_EXECUTABLE(csapp_07_01exc ./chapter07/chapter07_01.cpp chapter07/chapter07_02.cpp)
+ADD_EXECUTABLE(csapp_08_01exc ./chapter08/Fork.cpp)
+ADD_EXECUTABLE(csapp_09_01exc ./chapter09/main.cpp)
 
-ADD_EXECUTABLE(unit_exec ./unit/test.cpp )
+ADD_EXECUTABLE(unit_exec ./unit/test.cpp)
 
 # 设置子模块
 ADD_SUBDIRECTORY(./lib libBin)
@@ -17,5 +17,5 @@ INCLUDE_DIRECTORIES(/usr/local/include/ShowBytesByType)
 
 # 设置要链接的库文件的名称: chapter02_exc > 使用库文件的目标程序
 #                       /usr/local/lib/libShowBytesByType_Share.dylib > 库文件绝对路径
-TARGET_LINK_LIBRARIES(chapter02_exc /usr/local/lib/libShowBytesByType_Share.dylib)
-TARGET_LINK_LIBRARIES(chapter03_exc /usr/local/lib/libprintHello.dylib)
+TARGET_LINK_LIBRARIES(csapp_02_01exc /usr/local/lib/libShowBytesByType_Share.dylib)
+TARGET_LINK_LIBRARIES(csapp_03_01exc /usr/local/lib/libprintHello.dylib)

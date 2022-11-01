@@ -83,12 +83,12 @@ clean: linuxBin/clean
 # Directory level rules for directory csappBin
 
 # Recursive "all" directory target.
-csappBin/all: csappBin/CMakeFiles/chapter03_exc.dir/all
 csappBin/all: csappBin/CMakeFiles/unit_exec.dir/all
-csappBin/all: csappBin/CMakeFiles/chapter07_exc.dir/all
-csappBin/all: csappBin/CMakeFiles/chapter09_exc.dir/all
-csappBin/all: csappBin/CMakeFiles/chapter08_exc.dir/all
-csappBin/all: csappBin/CMakeFiles/chapter02_exc.dir/all
+csappBin/all: csappBin/CMakeFiles/csapp_02_01exc.dir/all
+csappBin/all: csappBin/CMakeFiles/csapp_09_01exc.dir/all
+csappBin/all: csappBin/CMakeFiles/csapp_08_01exc.dir/all
+csappBin/all: csappBin/CMakeFiles/csapp_07_01exc.dir/all
+csappBin/all: csappBin/CMakeFiles/csapp_03_01exc.dir/all
 csappBin/all: csappBin/libBin/all
 .PHONY : csappBin/all
 
@@ -97,12 +97,12 @@ csappBin/preinstall: csappBin/libBin/preinstall
 .PHONY : csappBin/preinstall
 
 # Recursive "clean" directory target.
-csappBin/clean: csappBin/CMakeFiles/chapter03_exc.dir/clean
 csappBin/clean: csappBin/CMakeFiles/unit_exec.dir/clean
-csappBin/clean: csappBin/CMakeFiles/chapter07_exc.dir/clean
-csappBin/clean: csappBin/CMakeFiles/chapter09_exc.dir/clean
-csappBin/clean: csappBin/CMakeFiles/chapter08_exc.dir/clean
-csappBin/clean: csappBin/CMakeFiles/chapter02_exc.dir/clean
+csappBin/clean: csappBin/CMakeFiles/csapp_02_01exc.dir/clean
+csappBin/clean: csappBin/CMakeFiles/csapp_09_01exc.dir/clean
+csappBin/clean: csappBin/CMakeFiles/csapp_08_01exc.dir/clean
+csappBin/clean: csappBin/CMakeFiles/csapp_07_01exc.dir/clean
+csappBin/clean: csappBin/CMakeFiles/csapp_03_01exc.dir/clean
 csappBin/clean: csappBin/libBin/clean
 .PHONY : csappBin/clean
 
@@ -167,32 +167,6 @@ CMakeFiles/main.dir/clean:
 .PHONY : CMakeFiles/main.dir/clean
 
 #=============================================================================
-# Target rules for target csappBin/CMakeFiles/chapter03_exc.dir
-
-# All Build rule for target.
-csappBin/CMakeFiles/chapter03_exc.dir/all:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/depend
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles --progress-num=7,8,9 "Built target chapter03_exc"
-.PHONY : csappBin/CMakeFiles/chapter03_exc.dir/all
-
-# Build rule for subdir invocation for target.
-csappBin/CMakeFiles/chapter03_exc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter03_exc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 0
-.PHONY : csappBin/CMakeFiles/chapter03_exc.dir/rule
-
-# Convenience name for target.
-chapter03_exc: csappBin/CMakeFiles/chapter03_exc.dir/rule
-.PHONY : chapter03_exc
-
-# clean rule for target.
-csappBin/CMakeFiles/chapter03_exc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter03_exc.dir/build.make csappBin/CMakeFiles/chapter03_exc.dir/clean
-.PHONY : csappBin/CMakeFiles/chapter03_exc.dir/clean
-
-#=============================================================================
 # Target rules for target csappBin/CMakeFiles/unit_exec.dir
 
 # All Build rule for target.
@@ -219,108 +193,134 @@ csappBin/CMakeFiles/unit_exec.dir/clean:
 .PHONY : csappBin/CMakeFiles/unit_exec.dir/clean
 
 #=============================================================================
-# Target rules for target csappBin/CMakeFiles/chapter07_exc.dir
+# Target rules for target csappBin/CMakeFiles/csapp_02_01exc.dir
 
 # All Build rule for target.
-csappBin/CMakeFiles/chapter07_exc.dir/all:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter07_exc.dir/build.make csappBin/CMakeFiles/chapter07_exc.dir/depend
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter07_exc.dir/build.make csappBin/CMakeFiles/chapter07_exc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles --progress-num=10,11,12 "Built target chapter07_exc"
-.PHONY : csappBin/CMakeFiles/chapter07_exc.dir/all
+csappBin/CMakeFiles/csapp_02_01exc.dir/all:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_02_01exc.dir/build.make csappBin/CMakeFiles/csapp_02_01exc.dir/depend
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_02_01exc.dir/build.make csappBin/CMakeFiles/csapp_02_01exc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles --progress-num=3,4,5,6 "Built target csapp_02_01exc"
+.PHONY : csappBin/CMakeFiles/csapp_02_01exc.dir/all
 
 # Build rule for subdir invocation for target.
-csappBin/CMakeFiles/chapter07_exc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 3
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter07_exc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 0
-.PHONY : csappBin/CMakeFiles/chapter07_exc.dir/rule
-
-# Convenience name for target.
-chapter07_exc: csappBin/CMakeFiles/chapter07_exc.dir/rule
-.PHONY : chapter07_exc
-
-# clean rule for target.
-csappBin/CMakeFiles/chapter07_exc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter07_exc.dir/build.make csappBin/CMakeFiles/chapter07_exc.dir/clean
-.PHONY : csappBin/CMakeFiles/chapter07_exc.dir/clean
-
-#=============================================================================
-# Target rules for target csappBin/CMakeFiles/chapter09_exc.dir
-
-# All Build rule for target.
-csappBin/CMakeFiles/chapter09_exc.dir/all:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter09_exc.dir/build.make csappBin/CMakeFiles/chapter09_exc.dir/depend
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter09_exc.dir/build.make csappBin/CMakeFiles/chapter09_exc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles --progress-num=15,16 "Built target chapter09_exc"
-.PHONY : csappBin/CMakeFiles/chapter09_exc.dir/all
-
-# Build rule for subdir invocation for target.
-csappBin/CMakeFiles/chapter09_exc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter09_exc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 0
-.PHONY : csappBin/CMakeFiles/chapter09_exc.dir/rule
-
-# Convenience name for target.
-chapter09_exc: csappBin/CMakeFiles/chapter09_exc.dir/rule
-.PHONY : chapter09_exc
-
-# clean rule for target.
-csappBin/CMakeFiles/chapter09_exc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter09_exc.dir/build.make csappBin/CMakeFiles/chapter09_exc.dir/clean
-.PHONY : csappBin/CMakeFiles/chapter09_exc.dir/clean
-
-#=============================================================================
-# Target rules for target csappBin/CMakeFiles/chapter08_exc.dir
-
-# All Build rule for target.
-csappBin/CMakeFiles/chapter08_exc.dir/all:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter08_exc.dir/build.make csappBin/CMakeFiles/chapter08_exc.dir/depend
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter08_exc.dir/build.make csappBin/CMakeFiles/chapter08_exc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles --progress-num=13,14 "Built target chapter08_exc"
-.PHONY : csappBin/CMakeFiles/chapter08_exc.dir/all
-
-# Build rule for subdir invocation for target.
-csappBin/CMakeFiles/chapter08_exc.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter08_exc.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 0
-.PHONY : csappBin/CMakeFiles/chapter08_exc.dir/rule
-
-# Convenience name for target.
-chapter08_exc: csappBin/CMakeFiles/chapter08_exc.dir/rule
-.PHONY : chapter08_exc
-
-# clean rule for target.
-csappBin/CMakeFiles/chapter08_exc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter08_exc.dir/build.make csappBin/CMakeFiles/chapter08_exc.dir/clean
-.PHONY : csappBin/CMakeFiles/chapter08_exc.dir/clean
-
-#=============================================================================
-# Target rules for target csappBin/CMakeFiles/chapter02_exc.dir
-
-# All Build rule for target.
-csappBin/CMakeFiles/chapter02_exc.dir/all:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter02_exc.dir/build.make csappBin/CMakeFiles/chapter02_exc.dir/depend
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter02_exc.dir/build.make csappBin/CMakeFiles/chapter02_exc.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles --progress-num=3,4,5,6 "Built target chapter02_exc"
-.PHONY : csappBin/CMakeFiles/chapter02_exc.dir/all
-
-# Build rule for subdir invocation for target.
-csappBin/CMakeFiles/chapter02_exc.dir/rule: cmake_check_build_system
+csappBin/CMakeFiles/csapp_02_01exc.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 4
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/chapter02_exc.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/csapp_02_01exc.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 0
-.PHONY : csappBin/CMakeFiles/chapter02_exc.dir/rule
+.PHONY : csappBin/CMakeFiles/csapp_02_01exc.dir/rule
 
 # Convenience name for target.
-chapter02_exc: csappBin/CMakeFiles/chapter02_exc.dir/rule
-.PHONY : chapter02_exc
+csapp_02_01exc: csappBin/CMakeFiles/csapp_02_01exc.dir/rule
+.PHONY : csapp_02_01exc
 
 # clean rule for target.
-csappBin/CMakeFiles/chapter02_exc.dir/clean:
-	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/chapter02_exc.dir/build.make csappBin/CMakeFiles/chapter02_exc.dir/clean
-.PHONY : csappBin/CMakeFiles/chapter02_exc.dir/clean
+csappBin/CMakeFiles/csapp_02_01exc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_02_01exc.dir/build.make csappBin/CMakeFiles/csapp_02_01exc.dir/clean
+.PHONY : csappBin/CMakeFiles/csapp_02_01exc.dir/clean
+
+#=============================================================================
+# Target rules for target csappBin/CMakeFiles/csapp_09_01exc.dir
+
+# All Build rule for target.
+csappBin/CMakeFiles/csapp_09_01exc.dir/all:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_09_01exc.dir/build.make csappBin/CMakeFiles/csapp_09_01exc.dir/depend
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_09_01exc.dir/build.make csappBin/CMakeFiles/csapp_09_01exc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles --progress-num=15,16 "Built target csapp_09_01exc"
+.PHONY : csappBin/CMakeFiles/csapp_09_01exc.dir/all
+
+# Build rule for subdir invocation for target.
+csappBin/CMakeFiles/csapp_09_01exc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/csapp_09_01exc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 0
+.PHONY : csappBin/CMakeFiles/csapp_09_01exc.dir/rule
+
+# Convenience name for target.
+csapp_09_01exc: csappBin/CMakeFiles/csapp_09_01exc.dir/rule
+.PHONY : csapp_09_01exc
+
+# clean rule for target.
+csappBin/CMakeFiles/csapp_09_01exc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_09_01exc.dir/build.make csappBin/CMakeFiles/csapp_09_01exc.dir/clean
+.PHONY : csappBin/CMakeFiles/csapp_09_01exc.dir/clean
+
+#=============================================================================
+# Target rules for target csappBin/CMakeFiles/csapp_08_01exc.dir
+
+# All Build rule for target.
+csappBin/CMakeFiles/csapp_08_01exc.dir/all:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_01exc.dir/build.make csappBin/CMakeFiles/csapp_08_01exc.dir/depend
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_01exc.dir/build.make csappBin/CMakeFiles/csapp_08_01exc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles --progress-num=13,14 "Built target csapp_08_01exc"
+.PHONY : csappBin/CMakeFiles/csapp_08_01exc.dir/all
+
+# Build rule for subdir invocation for target.
+csappBin/CMakeFiles/csapp_08_01exc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/csapp_08_01exc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 0
+.PHONY : csappBin/CMakeFiles/csapp_08_01exc.dir/rule
+
+# Convenience name for target.
+csapp_08_01exc: csappBin/CMakeFiles/csapp_08_01exc.dir/rule
+.PHONY : csapp_08_01exc
+
+# clean rule for target.
+csappBin/CMakeFiles/csapp_08_01exc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_08_01exc.dir/build.make csappBin/CMakeFiles/csapp_08_01exc.dir/clean
+.PHONY : csappBin/CMakeFiles/csapp_08_01exc.dir/clean
+
+#=============================================================================
+# Target rules for target csappBin/CMakeFiles/csapp_07_01exc.dir
+
+# All Build rule for target.
+csappBin/CMakeFiles/csapp_07_01exc.dir/all:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_07_01exc.dir/build.make csappBin/CMakeFiles/csapp_07_01exc.dir/depend
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_07_01exc.dir/build.make csappBin/CMakeFiles/csapp_07_01exc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles --progress-num=10,11,12 "Built target csapp_07_01exc"
+.PHONY : csappBin/CMakeFiles/csapp_07_01exc.dir/all
+
+# Build rule for subdir invocation for target.
+csappBin/CMakeFiles/csapp_07_01exc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/csapp_07_01exc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 0
+.PHONY : csappBin/CMakeFiles/csapp_07_01exc.dir/rule
+
+# Convenience name for target.
+csapp_07_01exc: csappBin/CMakeFiles/csapp_07_01exc.dir/rule
+.PHONY : csapp_07_01exc
+
+# clean rule for target.
+csappBin/CMakeFiles/csapp_07_01exc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_07_01exc.dir/build.make csappBin/CMakeFiles/csapp_07_01exc.dir/clean
+.PHONY : csappBin/CMakeFiles/csapp_07_01exc.dir/clean
+
+#=============================================================================
+# Target rules for target csappBin/CMakeFiles/csapp_03_01exc.dir
+
+# All Build rule for target.
+csappBin/CMakeFiles/csapp_03_01exc.dir/all:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_03_01exc.dir/build.make csappBin/CMakeFiles/csapp_03_01exc.dir/depend
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_03_01exc.dir/build.make csappBin/CMakeFiles/csapp_03_01exc.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles --progress-num=7,8,9 "Built target csapp_03_01exc"
+.PHONY : csappBin/CMakeFiles/csapp_03_01exc.dir/all
+
+# Build rule for subdir invocation for target.
+csappBin/CMakeFiles/csapp_03_01exc.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 3
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 csappBin/CMakeFiles/csapp_03_01exc.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/CMakeFiles 0
+.PHONY : csappBin/CMakeFiles/csapp_03_01exc.dir/rule
+
+# Convenience name for target.
+csapp_03_01exc: csappBin/CMakeFiles/csapp_03_01exc.dir/rule
+.PHONY : csapp_03_01exc
+
+# clean rule for target.
+csappBin/CMakeFiles/csapp_03_01exc.dir/clean:
+	$(MAKE) $(MAKESILENT) -f csappBin/CMakeFiles/csapp_03_01exc.dir/build.make csappBin/CMakeFiles/csapp_03_01exc.dir/clean
+.PHONY : csappBin/CMakeFiles/csapp_03_01exc.dir/clean
 
 #=============================================================================
 # Target rules for target csappBin/libBin/CMakeFiles/printHello_share.dir
