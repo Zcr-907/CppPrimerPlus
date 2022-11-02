@@ -15,6 +15,7 @@ add_executable(main main.cpp)
 #           arg2 > 指定构建树路径,使用相对路径
 ADD_SUBDIRECTORY(csapp csappBin)
 ADD_SUBDIRECTORY(LinuxKernel/LinuxKernelDevelopment linuxBin)
+ADD_SUBDIRECTORY(CppPrimerPlus cpp)
 
 
 # ==================================================================================================================

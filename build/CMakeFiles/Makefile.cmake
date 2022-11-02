@@ -29,6 +29,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/Darwin.cmake"
   "/Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.21/Modules/Platform/UnixPaths.cmake"
   "../CMakeLists.txt"
+  "../CppPrimerPlus/CMakeLists.txt"
   "../LinuxKernel/LinuxKernelDevelopment/CMakeLists.txt"
   "CMakeFiles/3.21.1/CMakeCCompiler.cmake"
   "CMakeFiles/3.21.1/CMakeCXXCompiler.cmake"
@@ -49,6 +50,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "csappBin/CMakeFiles/CMakeDirectoryInformation.cmake"
   "csappBin/libBin/CMakeFiles/CMakeDirectoryInformation.cmake"
   "linuxBin/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "cpp/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
@@ -66,4 +68,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "csappBin/libBin/CMakeFiles/printHello_static.dir/DependInfo.cmake"
   "linuxBin/CMakeFiles/lkd_03_thread.dir/DependInfo.cmake"
   "linuxBin/CMakeFiles/lkd_03_process.dir/DependInfo.cmake"
+  "cpp/CMakeFiles/cpp_03_dev.dir/DependInfo.cmake"
+  "cpp/CMakeFiles/cpp_02_dev.dir/DependInfo.cmake"
   )

@@ -330,6 +330,32 @@ lkd_03_process/fast:
 	$(MAKE) $(MAKESILENT) -f linuxBin/CMakeFiles/lkd_03_process.dir/build.make linuxBin/CMakeFiles/lkd_03_process.dir/build
 .PHONY : lkd_03_process/fast
 
+#=============================================================================
+# Target rules for targets named cpp_03_dev
+
+# Build rule for target.
+cpp_03_dev: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_03_dev
+.PHONY : cpp_03_dev
+
+# fast build rule for target.
+cpp_03_dev/fast:
+	$(MAKE) $(MAKESILENT) -f cpp/CMakeFiles/cpp_03_dev.dir/build.make cpp/CMakeFiles/cpp_03_dev.dir/build
+.PHONY : cpp_03_dev/fast
+
+#=============================================================================
+# Target rules for targets named cpp_02_dev
+
+# Build rule for target.
+cpp_02_dev: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_02_dev
+.PHONY : cpp_02_dev
+
+# fast build rule for target.
+cpp_02_dev/fast:
+	$(MAKE) $(MAKESILENT) -f cpp/CMakeFiles/cpp_02_dev.dir/build.make cpp/CMakeFiles/cpp_02_dev.dir/build
+.PHONY : cpp_02_dev/fast
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -367,6 +393,8 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... ShowBytesByType_Share"
+	@echo "... cpp_02_dev"
+	@echo "... cpp_03_dev"
 	@echo "... csapp_02_01exc"
 	@echo "... csapp_03_01exc"
 	@echo "... csapp_07_01exc"
