@@ -64,5 +64,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "csappBin/libBin/CMakeFiles/printHello_share.dir/DependInfo.cmake"
   "csappBin/libBin/CMakeFiles/ShowBytesByType_Share.dir/DependInfo.cmake"
   "csappBin/libBin/CMakeFiles/printHello_static.dir/DependInfo.cmake"
-  "linuxBin/CMakeFiles/lkd_03.dir/DependInfo.cmake"
+  "linuxBin/CMakeFiles/lkd_03_thread.dir/DependInfo.cmake"
+  "linuxBin/CMakeFiles/lkd_03_process.dir/DependInfo.cmake"
   )

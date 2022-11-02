@@ -27,10 +27,11 @@
 /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/csappBin/libBin/CMakeFiles/ShowBytesByType_Share.dir
 /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/csappBin/libBin/CMakeFiles/install/local.dir
 /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/csappBin/libBin/CMakeFiles/printHello_static.dir
-/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/linuxBin/CMakeFiles/install/local.dir
-/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/linuxBin/CMakeFiles/rebuild_cache.dir
-/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/linuxBin/CMakeFiles/edit_cache.dir
 /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/linuxBin/CMakeFiles/install/strip.dir
 /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/linuxBin/CMakeFiles/install.dir
+/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/linuxBin/CMakeFiles/rebuild_cache.dir
+/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/linuxBin/CMakeFiles/edit_cache.dir
+/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/linuxBin/CMakeFiles/install/local.dir
+/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/linuxBin/CMakeFiles/lkd_03_thread.dir
 /Users/leilimin/IDEA_ALei/CppPrimerPlus/build/linuxBin/CMakeFiles/list_install_components.dir
-/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/linuxBin/CMakeFiles/lkd_03.dir
+/Users/leilimin/IDEA_ALei/CppPrimerPlus/build/linuxBin/CMakeFiles/lkd_03_process.dir

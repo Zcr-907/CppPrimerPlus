@@ -305,17 +305,30 @@ printHello_static/fast:
 .PHONY : printHello_static/fast
 
 #=============================================================================
-# Target rules for targets named lkd_03
+# Target rules for targets named lkd_03_thread
 
 # Build rule for target.
-lkd_03: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lkd_03
-.PHONY : lkd_03
+lkd_03_thread: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lkd_03_thread
+.PHONY : lkd_03_thread
 
 # fast build rule for target.
-lkd_03/fast:
-	$(MAKE) $(MAKESILENT) -f linuxBin/CMakeFiles/lkd_03.dir/build.make linuxBin/CMakeFiles/lkd_03.dir/build
-.PHONY : lkd_03/fast
+lkd_03_thread/fast:
+	$(MAKE) $(MAKESILENT) -f linuxBin/CMakeFiles/lkd_03_thread.dir/build.make linuxBin/CMakeFiles/lkd_03_thread.dir/build
+.PHONY : lkd_03_thread/fast
+
+#=============================================================================
+# Target rules for targets named lkd_03_process
+
+# Build rule for target.
+lkd_03_process: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 lkd_03_process
+.PHONY : lkd_03_process
+
+# fast build rule for target.
+lkd_03_process/fast:
+	$(MAKE) $(MAKESILENT) -f linuxBin/CMakeFiles/lkd_03_process.dir/build.make linuxBin/CMakeFiles/lkd_03_process.dir/build
+.PHONY : lkd_03_process/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -360,7 +373,8 @@ help:
 	@echo "... csapp_08_Fork"
 	@echo "... csapp_08_Recycle"
 	@echo "... csapp_09_01exc"
-	@echo "... lkd_03"
+	@echo "... lkd_03_process"
+	@echo "... lkd_03_thread"
 	@echo "... main"
 	@echo "... printHello_share"
 	@echo "... printHello_static"
