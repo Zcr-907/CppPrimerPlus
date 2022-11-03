@@ -1,6 +1,6 @@
 #include <iostream> // C++新式风格头文件名
-#include <math.h>   // C旧式头文件名
-#include <cmath>    // 转换为C++新式风格的C库
+//#include <math.h>   // C旧式头文件名
+//#include <cmath>    // 转换为C++新式风格的C库
 
 
 // C++要求以int main()为开始
