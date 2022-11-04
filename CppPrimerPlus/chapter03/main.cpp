@@ -25,6 +25,11 @@ int main() {
     // 不同的物理机1Byte的实现并不一致,CHAR_BIT表示了当前物理机上1Byte的Bit数
     cout << "CHAR_BIT:" << CHAR_BIT << endl;
 
+    // static_cast<typeName>(value)   typeName(value)   (typeName)value: 类型转换
+    char ch1 = 'z';
+    cout << "Z is :" << static_cast<int>(ch1) << endl;
+    cout << "Z is :" << ch1 << endl;
+
     // ================================================================================================================
     int_dev();
     char_dev();
