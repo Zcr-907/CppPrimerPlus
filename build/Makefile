@@ -331,6 +331,19 @@ lkd_03_process/fast:
 .PHONY : lkd_03_process/fast
 
 #=============================================================================
+# Target rules for targets named cpp_04_dev
+
+# Build rule for target.
+cpp_04_dev: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_04_dev
+.PHONY : cpp_04_dev
+
+# fast build rule for target.
+cpp_04_dev/fast:
+	$(MAKE) $(MAKESILENT) -f cpp/CMakeFiles/cpp_04_dev.dir/build.make cpp/CMakeFiles/cpp_04_dev.dir/build
+.PHONY : cpp_04_dev/fast
+
+#=============================================================================
 # Target rules for targets named cpp_03_dev
 
 # Build rule for target.
@@ -395,6 +408,7 @@ help:
 	@echo "... ShowBytesByType_Share"
 	@echo "... cpp_02_dev"
 	@echo "... cpp_03_dev"
+	@echo "... cpp_04_dev"
 	@echo "... csapp_02_01exc"
 	@echo "... csapp_03_01exc"
 	@echo "... csapp_07_01exc"
