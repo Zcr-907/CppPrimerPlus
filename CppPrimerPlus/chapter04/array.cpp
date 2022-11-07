@@ -18,7 +18,7 @@ void array_func() {
     cout << "short_array.length: " << sizeof(short_array) / sizeof(short) << endl;
 
     // 字符串的初始化方式;
-    char str1[] = "i am string";
+    char str1[] = "i am string_func";
     char str_error[] = {'a', 'b', 'c'};
     char str2[] = {'A', 'B', 'C', '\0'};
     cout << "str1: " << str1 << endl;
