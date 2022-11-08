@@ -6,10 +6,13 @@ void struct_unc();
 
 void union_func();
 
+void enum_func();
+
 int main() {
-    array_func();
-    string_func();
-    struct_unc();
-    union_func();
+//    array_func();
+//    string_func();
+//    struct_unc();
+//    union_func();
+    enum_func();
 }
 
