@@ -27,10 +27,10 @@ void enum_func() {
     // 对于枚举变量而言,不能通过枚举值进行算术运算
     // 但是对于其他整型,枚举值可以被提升为整型进行计算
     // 怎么理解上述表达? 其实C++并没有为枚举值定义算术运算,但是二者在双数运算的时候提升至整型,整型不能被赋值给枚举变量
-    int a = orange + red + 1;
+    int val_a = orange + red + 1;
     color road_color;
     road_color = color(430000);  // 为 使用整型值为枚举变量赋值的方式
-    cout << "int a: " << a << endl;
+    cout << "int a: " << val_a << endl;
     cout << "road_color: " << road_color << endl;
     cout << "one: " << one << endl;
     cout << "A: " << A << endl;
