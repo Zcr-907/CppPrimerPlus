@@ -40,12 +40,19 @@ void pointer_func() {
     cout << "After Add 1 p_arr_int[1]: " << p_arr_int[1] << endl;
     cout << "After Add 1 p_arr_int[2]: " << p_arr_int[2] << endl;
     // 释放数组内存时需要添加[]
+    // 释放的首地址必须是分配时的首地址
+    p_arr_int -= 1;
     delete[] p_arr_int;
 
+    // 指针运算
     int int_arr[] = {1, 2, 3};
     int *p_arr_1 = int_arr;     // 数组名int_arr为数组首元素地址
-    p_arr_1 = p_arr_1 + 1;      // p_arr_1 = &int_arr[0] + sizeof(int)
-    int (*p_arr)[3] = &int_arr; // &int_arr虽然在数字表示上和int_arr一致,但是p_arr+1 = &int_arr[0] + sizeof(int_arr)
+    int (*p_arr)[3] = &int_arr; // &int_arr虽然在数字表示上和int_arr一致,但是
+    cout << "p_arr_1: " << p_arr_1 << "\tp_arr_1+1: " << p_arr_1 + 1 << endl; // p_arr_1 = &int_arr[0] + sizeof(int)
+    cout << "p_arr  : " << p_arr << "\tp_arr+1  : " << p_arr + 1
+         << endl;         // p_arr+1 = &int_arr[0] + sizeof(int_arr)
+    // 指针也可以使用数组表示法
+    cout << "*p_a -> p_a[0]: " << p_a[0] << endl;
     cout << "-------> pointer_func <-------" << endl;
 
 }
