@@ -35,7 +35,20 @@ void array_vector_func() {
          << &a1[minus_difference] << endl;
     cout << "a3[0]: " << a3[0] << "\t" << "&a3[0]" << &a3[0] << endl;
     a3[-1] = 1;
-    a3.at(-1) = 1;  // 运行时抛出异常
+//    a3.at(-1) = 1;  // 运行时抛出异常
+
+    char *p_char1 = "ABC";
+    char *p_char2 = "ABC";
+    char char_arr[] = "ABC";
+
+    // char *: 对于字符指针,共用的是一个"ABC"字面量
+    // char[]: 将字面量 "ABC" 拷贝一份复制数据副本,将这个副本的地址应用交给字符数组
+    // 如果通过指针修改了字面量,那么所有引用该字面量的数据都会产生数据修改 => 但是p_char1[1]是被拒绝操作的,字面量的存储区域收到保护
+    printf("p_char1: %p\n",p_char1);
+    printf("p_char1: %p\n",p_char2);
+    printf("p_char1: %p\n",char_arr);
+
+
     cout << "-------> array_vector_func <-------" << endl;
 
 }
