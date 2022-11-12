@@ -36,4 +36,14 @@ int main() {
     cout << R"+*(p_char=="ABC": )+*" << (p_char == "ABC") << endl;
     cout << R"+*(char_arr=="ABC": )+*" << (char_arr == "ABC") << endl;
 
+    // 基于范围的for循环
+    for (char element: char_arr) {  // 类似java增强for循环,但是不能修改成员的值
+        cout << "element: " << element << endl;
+    }
+    for (char &element: char_arr) { // &这种方式拓展了该类型循环类可以修改成员的方式
+        element += 1;
+    }
+    cout << "every char add one value:" << char_arr << endl;
+
+
 }
