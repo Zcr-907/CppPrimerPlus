@@ -1,0 +1,6 @@
+切换目录: cd ~/CppPrimerPlus/CppPrimerPlus/chapter05
+编译文件: gcc main.cpp
+准备样本: EOFTestt.txt
+         EOF => ctl + z
+执行测试: ./a.out < EOFTestt.txt
+
