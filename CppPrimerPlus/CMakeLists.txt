@@ -4,4 +4,5 @@ ADD_EXECUTABLE(cpp_04_dev ./chapter04/main.cpp ./chapter04/array.cpp ./chapter04
         ./chapter04/enum.cpp ./chapter04/pointer.cpp ./chapter04/array_vector.cpp)
 
 ADD_EXECUTABLE(cpp_05_dev ./chapter05/main.cpp )
+ADD_EXECUTABLE(cpp_06_dev ./chapter06/main.cpp ./chapter06/fileIO.cpp)
 
