@@ -331,6 +331,32 @@ lkd_03_process/fast:
 .PHONY : lkd_03_process/fast
 
 #=============================================================================
+# Target rules for targets named cpp_02_dev
+
+# Build rule for target.
+cpp_02_dev: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_02_dev
+.PHONY : cpp_02_dev
+
+# fast build rule for target.
+cpp_02_dev/fast:
+	$(MAKE) $(MAKESILENT) -f cpp/CMakeFiles/cpp_02_dev.dir/build.make cpp/CMakeFiles/cpp_02_dev.dir/build
+.PHONY : cpp_02_dev/fast
+
+#=============================================================================
+# Target rules for targets named cpp_03_dev
+
+# Build rule for target.
+cpp_03_dev: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_03_dev
+.PHONY : cpp_03_dev
+
+# fast build rule for target.
+cpp_03_dev/fast:
+	$(MAKE) $(MAKESILENT) -f cpp/CMakeFiles/cpp_03_dev.dir/build.make cpp/CMakeFiles/cpp_03_dev.dir/build
+.PHONY : cpp_03_dev/fast
+
+#=============================================================================
 # Target rules for targets named cpp_06_dev
 
 # Build rule for target.
@@ -342,6 +368,19 @@ cpp_06_dev: cmake_check_build_system
 cpp_06_dev/fast:
 	$(MAKE) $(MAKESILENT) -f cpp/CMakeFiles/cpp_06_dev.dir/build.make cpp/CMakeFiles/cpp_06_dev.dir/build
 .PHONY : cpp_06_dev/fast
+
+#=============================================================================
+# Target rules for targets named cpp_07_dev
+
+# Build rule for target.
+cpp_07_dev: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_07_dev
+.PHONY : cpp_07_dev
+
+# fast build rule for target.
+cpp_07_dev/fast:
+	$(MAKE) $(MAKESILENT) -f cpp/CMakeFiles/cpp_07_dev.dir/build.make cpp/CMakeFiles/cpp_07_dev.dir/build
+.PHONY : cpp_07_dev/fast
 
 #=============================================================================
 # Target rules for targets named cpp_05_dev
@@ -368,32 +407,6 @@ cpp_04_dev: cmake_check_build_system
 cpp_04_dev/fast:
 	$(MAKE) $(MAKESILENT) -f cpp/CMakeFiles/cpp_04_dev.dir/build.make cpp/CMakeFiles/cpp_04_dev.dir/build
 .PHONY : cpp_04_dev/fast
-
-#=============================================================================
-# Target rules for targets named cpp_03_dev
-
-# Build rule for target.
-cpp_03_dev: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_03_dev
-.PHONY : cpp_03_dev
-
-# fast build rule for target.
-cpp_03_dev/fast:
-	$(MAKE) $(MAKESILENT) -f cpp/CMakeFiles/cpp_03_dev.dir/build.make cpp/CMakeFiles/cpp_03_dev.dir/build
-.PHONY : cpp_03_dev/fast
-
-#=============================================================================
-# Target rules for targets named cpp_02_dev
-
-# Build rule for target.
-cpp_02_dev: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_02_dev
-.PHONY : cpp_02_dev
-
-# fast build rule for target.
-cpp_02_dev/fast:
-	$(MAKE) $(MAKESILENT) -f cpp/CMakeFiles/cpp_02_dev.dir/build.make cpp/CMakeFiles/cpp_02_dev.dir/build
-.PHONY : cpp_02_dev/fast
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -437,6 +450,7 @@ help:
 	@echo "... cpp_04_dev"
 	@echo "... cpp_05_dev"
 	@echo "... cpp_06_dev"
+	@echo "... cpp_07_dev"
 	@echo "... csapp_02_01exc"
 	@echo "... csapp_03_01exc"
 	@echo "... csapp_07_01exc"

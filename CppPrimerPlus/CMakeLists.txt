@@ -5,4 +5,5 @@ ADD_EXECUTABLE(cpp_04_dev ./chapter04/main.cpp ./chapter04/array.cpp ./chapter04
 
 ADD_EXECUTABLE(cpp_05_dev ./chapter05/main.cpp )
 ADD_EXECUTABLE(cpp_06_dev ./chapter06/main.cpp ./chapter06/fileIO.cpp)
+ADD_EXECUTABLE(cpp_07_dev ./chapter07/main.cpp ./chapter07/para_is_arr.cpp)
 
