@@ -1,5 +1,17 @@
 #include <iostream>
 
+struct offset {
+    int x;
+    int y;
+};
+
+struct location {
+    offset o1;
+    double height;
+};
+
+void value_transfer_struct(location param);
+
 // 函数声明: int arr[] 与int *arr是可以互相替换的
 int para_is_arr_func(const int arr[], int size);
 
@@ -15,8 +27,22 @@ int main() {
     update_arr_element(int_arr + 1, 1, -1);
     int index = 0;
     for (int element: int_arr) {
-        cout << (index++)+1 << " = " << element << "\t";
+        cout << (index++) + 1 << " = " << element << "\t";
     }
     cout << endl;
+
+
+    // 按值传递结构,那么将深拷贝一个结构的值给被调函数,被调函数对parma的操作并不会影响到arg
+    struct location location1 = {
+            {1, 2}, 1.0
+    };
+    value_transfer_struct(location1);
+    std::cout << location1.o1.x << std::endl;
 }
+
+void value_transfer_struct(location param) {
+    param.o1.x = -1;
+    std::cout << param.o1.x << std::endl;
+}
+
 
