@@ -1,10 +1,7 @@
 #include <iostream>
 
-// const int *arr:
-// p = &arr[0] => 允许将p = &arr1[0]; 也就是修改p本身所存储的值
-// p[0]=1      => 这是不允许的,因为被const修饰,不能修改p所存储地址所存储的值
-// const数据只能交由const指针来处理
-// 非const数据可以交由任意指针
+// 1.一维数组作为实参
+//   函数声明: int arr[] 与int *arr是可以互相替换的
 int para_is_arr_func(const int *arr, int size) {
     using namespace std;
     cout << "-------> para_is_arr_func <-------" << endl;
@@ -15,6 +12,7 @@ int para_is_arr_func(const int *arr, int size) {
     cout << "-------> para_is_arr_func <-------" << endl;
     return sum;
 }
+
 
 void update_arr_element(int *arr, int index, int update_val) {
     arr[index] = update_val;
@@ -39,15 +37,21 @@ void const_func() {
     // 4.int *const p_c2: 这种形式可以禁止p_c2指向其他的地址,但是可以修改p_c2处所存储地址&c所指向地址的数据
     int *const p_c2 = &c;
     *p_c2 = 2;
-//    p_c2 = &b;
+    // p_c2 = &b;
 }
 
 // int arr[][4] => int(*arr)[]4 != int *arr[4]
 // int arr[][4] => int(*arr)[]4 :    表示指向包含四个int的指针
 // int *arr[4]                  :    表示四个int类型的指针的数组
 // 传递二维数组时,只需要在行参处声明列即刻,而且该函数只能接受x行4列的数组
-void multiple_arr(int arr[][4], int row) {
-
+int multiple_arr(int arr[][4], int row) {
+    int sum = 0;
+    for (int i = 0; i < row; ++i) {
+        for (int j = 0; j < (sizeof(arr[0]) / sizeof(int)); ++j) {
+            sum += arr[i][j];
+        }
+    }
+    return sum;
 }
 
 
