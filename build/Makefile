@@ -344,6 +344,19 @@ cpp_02_dev/fast:
 .PHONY : cpp_02_dev/fast
 
 #=============================================================================
+# Target rules for targets named cpp_08_dev
+
+# Build rule for target.
+cpp_08_dev: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cpp_08_dev
+.PHONY : cpp_08_dev
+
+# fast build rule for target.
+cpp_08_dev/fast:
+	$(MAKE) $(MAKESILENT) -f cpp/CMakeFiles/cpp_08_dev.dir/build.make cpp/CMakeFiles/cpp_08_dev.dir/build
+.PHONY : cpp_08_dev/fast
+
+#=============================================================================
 # Target rules for targets named cpp_03_dev
 
 # Build rule for target.
@@ -451,6 +464,7 @@ help:
 	@echo "... cpp_05_dev"
 	@echo "... cpp_06_dev"
 	@echo "... cpp_07_dev"
+	@echo "... cpp_08_dev"
 	@echo "... csapp_02_01exc"
 	@echo "... csapp_03_01exc"
 	@echo "... csapp_07_01exc"
