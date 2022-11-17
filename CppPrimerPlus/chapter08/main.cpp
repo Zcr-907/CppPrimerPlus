@@ -19,6 +19,15 @@ inline int incr_int(int a) {
     return ++a;
 }
 
+// 2.默认参数
+//   函数的默认参数实现通过函数声明实现,定义携带默认参数的函数时,必须从从右往左设置默认值( invalid eg:  int a=1, int b, int c = 3)
+//   使用时: 从左往右进行赋值
+//          print_3_int_can_default(1);         valid       a=1,b=2,c=3
+//          print_3_int_can_default(1,12);      valid       a=1,b=12,c=3
+//          print_3_int_can_default(1,12,13);   valid       a=1,b=12,c=13
+//          print_3_int_can_default(1,,13);     invalid
+void print_3_int_can_default(int a, int b = 2, int c = 3);
+
 int main() {
     cout << "using inline func incr_int: " << incr_int(2) << endl;
 
@@ -51,6 +60,12 @@ int main() {
     cout << "l1.o1.x: " << l1.o1.x << endl;
     cout << "l1.o1.y: " << l1.o1.y << endl;
     cout << "l1.height: " << l1.height << endl;
+
+
+    print_3_int_can_default(1);
+    print_3_int_can_default(1, 12);
+    print_3_int_can_default(1, 12, 13);
+
 }
 
 void update_int_val(int &original, int update) {
@@ -61,5 +76,16 @@ void update_struct(Location &original) {
     original = {
             {4, 5}, 6
     };
+}
+
+void print_3_int_can_default(int a, int b, int c) {
+    using namespace std;
+    cout << "-------> print_3_int_can_default <-------" << endl;
+    cout << "a= " << a << endl;
+    cout << "b= " << b << endl;
+    cout << "c= " << c << endl;
+    cout << "-------> print_3_int_can_default <-------" << endl;
+
+
 }
 
