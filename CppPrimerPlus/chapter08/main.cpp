@@ -66,6 +66,28 @@ int main() {
     print_3_int_can_default(1, 12);
     print_3_int_can_default(1, 12, 13);
 
+    // 4.函数重载
+    void reload(const int &a);      // 左值匹配
+    void reload(string a);          // 函数标识不同
+    void reload(const int &&a);     // 右值匹配
+
+    int reload_test = 1;
+    reload(reload_test);
+    reload(1);
+
+
+}
+
+void reload(const int &a) {
+    cout << "const int &a" << endl;
+}
+
+void reload(string a) {
+    cout << "const string a" << endl;
+}
+
+void reload(const int &&a) {
+    cout << "const int &&a" << endl;
 }
 
 void update_int_val(int &original, int update) {
@@ -85,7 +107,6 @@ void print_3_int_can_default(int a, int b, int c) {
     cout << "b= " << b << endl;
     cout << "c= " << c << endl;
     cout << "-------> print_3_int_can_default <-------" << endl;
-
-
 }
+
 
