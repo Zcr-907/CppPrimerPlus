@@ -28,6 +28,9 @@ inline int incr_int(int a) {
 //          print_3_int_can_default(1,,13);     invalid
 void print_3_int_can_default(int a, int b = 2, int c = 3);
 
+template<typename T>
+void swap_two_val(T &a, T &b);
+
 int main() {
     cout << "using inline func incr_int: " << incr_int(2) << endl;
 
@@ -76,6 +79,20 @@ int main() {
     reload(1);
 
 
+    int s_a = 1;
+    int s_b = 2;
+    swap_two_val(s_a, s_b);
+    cout<<"s_a="<<s_a<<endl;
+    cout<<"s_b="<<s_b<<endl;
+
+
+}
+
+template<typename T>
+void swap_two_val(T &a, T &b) {
+    T temp = a;
+    a = b;
+    b = temp;
 }
 
 void reload(const int &a) {
