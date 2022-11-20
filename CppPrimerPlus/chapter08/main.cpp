@@ -28,8 +28,34 @@ inline int incr_int(int a) {
 //          print_3_int_can_default(1,,13);     invalid
 void print_3_int_can_default(int a, int b = 2, int c = 3);
 
-template<typename T>
-void swap_two_val(T &a, T &b);
+// 5.通用模版函数: 起到了类似Java中泛型的作用,
+//   关键字"typename"是必须的,仅可以使用class替代,否则必须为typename。这2关键字(typename和class是等价的)
+//   模版函数并不能缩短可执行函数,例如对于swap_two_val()而言,使用int和double时,最终将由2个独立的函数定义,就像以手工定义了这些函数一样
+//   最终的代码不包括任何模版,近包含了为程序生成的实际函数 => 之所以使用模版函数是由于它生成的多个函数定义更简单更可靠(避免手动的copy,replace)
+//                                                    对于#define也更符合程序生成 #define,#define会对任何(变量名等)也进行替换
+//   模版函数同样可以使用函数重载(只要2个函数 特征指标不同)
+
+//   对于以下方法的调用,当调用时,实参都能与之匹配时: 非模版函数>显示具体化模版函数>通用模版函数
+//                           其他情况        : 根据实参类型按需调度
+//  1)通用模版函数
+template<class T>
+void swap_two_val(T &, T &); // 等价template<typename T>  // 等价void swap_two_val(T &a, T &b);
+//  2)非模版函数
+void swap_two_val(char &, char &);
+
+//  3)显示具体化模版函数
+template<>
+void swap_two_val<Offset>(Offset &, Offset &);
+
+// 5.1实例化与具体化
+// 1)隐式实例化: 当程序编译时,发现程序需要进行模版实例化时才会生成对应类型(按需)
+//   显示实例化: 如下方式则在该声明处识别出要生成模版实例,而不需等编译判断是否需要生成
+template void swap_two_val<int>(int &, int &);
+
+// 2)显示具体化: 即告诉编译器不要使用函数模版进行实例化,而应该使用专门为Location类型显示的定义函数定义
+//              显示具体化在template后添加<>,但显示实例化没有,如果在同一个编译单元使用同一种类型的显示实例化与显示具体化将会出错
+template<>
+void swap_two_val<Location>(Location &, Location &);
 
 int main() {
     cout << "using inline func incr_int: " << incr_int(2) << endl;
@@ -69,8 +95,9 @@ int main() {
     print_3_int_can_default(1, 12);
     print_3_int_can_default(1, 12, 13);
 
-    // 4.函数重载
+    // 4.函数重载: 对于指针类型的参数与引用类型的参数,存在const匹配的优先级,其他的常规参数如果除const之外特产相同，那么编译将会出错，存在二义性
     void reload(const int &a);      // 左值匹配
+    void reload(int &a);
     void reload(string a);          // 函数标识不同
     void reload(const int &&a);     // 右值匹配
 
@@ -78,14 +105,24 @@ int main() {
     reload(reload_test);
     reload(1);
 
-
+    // 5.函数模版,起到了类似Java中泛型的作用
     int s_a = 1;
     int s_b = 2;
     swap_two_val(s_a, s_b);
-    cout<<"s_a="<<s_a<<endl;
-    cout<<"s_b="<<s_b<<endl;
+    cout << "s_a=" << s_a << endl;
+    cout << "s_b=" << s_b << endl;
 
 
+}
+
+template<typename T1, typename T2>
+auto decltype_func(T1 x, T2 y) -> decltype(x + y) {
+    // decltype(x + y) xy_type => 将xy_type定义为(x+y)的类型
+    // typedef 为后续使用上述类型提供方便
+    // auto: 可以理解为占位符,表示由后置返回类型(-> decltype(x + y))提供的类型
+    typedef decltype(x + y) xy_type;
+    xy_type z = x + y;
+    return z;
 }
 
 template<typename T>
@@ -95,7 +132,31 @@ void swap_two_val(T &a, T &b) {
     b = temp;
 }
 
+void swap_two_val(char &a, char &b) {
+    char temp = a;
+    a = b;
+    b = temp;
+}
+
+template<>
+void swap_two_val<Offset>(Offset &a, Offset &b) {
+    int temp_x = a.x;
+    int temp_y = a.y;
+    a.x = b.x;
+    a.y = b.y;
+    b.x = temp_x;
+    b.y = temp_y;
+}
+
+void swap_two_val(Location &, Location &) {
+
+}
+
 void reload(const int &a) {
+    cout << "const int &a" << endl;
+}
+
+void reload(int &a) {
     cout << "const int &a" << endl;
 }
 
