@@ -17,6 +17,27 @@ static void incr_static_var_in_block();
 // 4.静态内部变量static_inner_test覆盖了header_test.cpp中的静态外部变量static_inner_test
 static string static_inner_test = "main.cpp static_inner_test";
 
+// 6.名称空间
+int tag = 2;
+namespace custom {
+    int tag = 1;
+    struct custom_info {
+        string info;
+        int *addr;
+    };
+
+    void show_custom();
+
+    void show_custom() {
+        cout << "show_custom" << endl;
+    }
+
+    // 内置nameSpace
+    namespace custom_inner {
+        int inner_tag;
+    }
+}
+
 int main() {
     // 1.头文件的基本使用
     cout << "-------> invoke by headed <-------" << endl;
@@ -73,7 +94,14 @@ int main() {
     delete[] p_init_arr_val;
     delete p_init_struct_val;
     cout << "-------> 动态分配内存并初始化 <-------" << endl;
+    cout << "-------> nameSpace <-------" << endl;
+    custom::show_custom();
+    using custom::tag;
+    // int tag; // Error，因为使用using声明,使得局部代码内已经将tag名称加入其中了
+    cout << "show custom::tag by tag= " << tag << endl;
+    cout << "::tag by ::tag= " << ::tag << endl;
 
+    cout << "-------> nameSpace <-------" << endl;
 
 }
 
