@@ -71,3 +71,13 @@ void Stock::show() const {
          << " share price: " << m_share_val
          << " total Worth: " << m_total_val << endl;
 }
+
+const Stock &Stock::top_val(const Stock &s) const {
+    // const Stock temp = *this; // 如果返回临时变量temp是存在风险的,因为离开函数时,temp就会被销毁,后续返回的该引用地址将有可能出现其他的情况
+    // 每个成员函数都有一个this指针,它指向调用对象
+    if (s.m_total_val > this->m_total_val) {
+        return s;
+    } else {
+        return *this;
+    }
+}

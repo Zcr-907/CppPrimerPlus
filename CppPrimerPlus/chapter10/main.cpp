@@ -54,6 +54,41 @@ int main() {
         ucg11.show();    // 因为方法被const修饰,保证了该方法不会修改对象属性,所以可以直接调用
         // ucg11.sell(); // 因为ucg12被const修饰,程序无法判断该方法是否会修改对象属性
         cout << "-------> const成员方法 <-------" << endl;
+
+        cout << "-------> this指针 <-------" << endl;
+        Stock ucg12("Ucg12.0", 1, 1.0);
+        ucg12.test_copy = 12;
+        Stock ucg13("Ucg13.0", 1, 1.1);
+        ucg13.test_copy = 13;
+        cout << ucg12.top_val(ucg13).test_copy << endl;
+        cout << "-------> this指针 <-------" << endl;
+
+        cout << "-------> 对象数组 <-------" << endl;
+        Stock stocks[3];                    // 调用默认的构造方法
+        cout << stocks[1].test_copy << endl;// 对象确实被创建了,因为公有字段被初始化了
+        cout << "-------> 对象数组 <-------" << endl;
+
+        cout << "-------> 类成员 <-------" << endl;
+        cout << Stock::class_field << endl;
+        cout << "-------> 类成员 <-------" << endl;
+
+        cout << "-------> 作用域内枚举 <-------" << endl;
+        // 因为枚举值相同所以无效
+//        enum egg1 {small, middle, big};
+//        enum egg2 {small, middle, big};
+        // 使用class或者struct关键字可以声明作用域枚举,这将不会导致冲突
+        enum class egg1 {
+            small, middle, big
+        };
+        enum struct egg2 {
+            small, middle, big
+        };
+        // 作用域枚举不支持隐式转换,必须通过显示的类型转换才能转为int
+        cout << "egg1::small =>" << (int) egg1::small << endl;
+        cout << "egg2::small =>" << (int) egg2::middle << endl;
+
+        cout << "-------> 作用域内枚举 <-------" << endl;
+
     }
     /**
      * -------> 对象的销毁 <-------

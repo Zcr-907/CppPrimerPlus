@@ -27,7 +27,8 @@ private:
 
 // 公共访问权限
 public:
-    int test_copy;
+    static const int class_field = 2;
+    int test_copy = 1;
 
     // 声明构造函数来进行初始化成员属性
     Stock();
@@ -49,6 +50,13 @@ public:
 
     // const成员函数保证函数定义内不会对成员属性进行更改
     void show() const;
+
+    // 第一个const: 表示返回的Stock引用不可被修改
+    //      => s1.top_val(s2)=s3;将不被允许
+    //      => s3=s1.top_val(s2); s3=s4; 这是允许的,因为经过一次赋值操作s3并不是返回的引用类型对象,而是深拷贝覆值过的对象,所以它是可变的
+    // 第二个const: 显示访问的对象s引用在方法内不可被修改
+    // 第三个const: 隐式访问的当前调用对象不会通过该方法修改自身的属性
+    const Stock &top_val(const Stock &s) const;
 };
 
 inline void Stock::set_tot() {
