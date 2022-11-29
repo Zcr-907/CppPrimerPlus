@@ -9,5 +9,6 @@ ADD_EXECUTABLE(cpp_07_dev ./chapter07/main.cpp ./chapter07/para_is_arr.cpp ./cha
 ADD_EXECUTABLE(cpp_08_dev ./chapter08/main.cpp )
 ADD_EXECUTABLE(cpp_09_dev ./chapter09/main.cpp ./chapter09/header_test.cpp ./chapter09/header_test.h)
 ADD_EXECUTABLE(cpp_10_dev ./chapter10/main.cpp ./chapter10/Stock.h ./chapter10/Stock.cpp)
+ADD_EXECUTABLE(cpp_11_dev ./chapter11/main.cpp ./chapter11/mytime0.cpp ./chapter11/mytime0.h)
 
 
