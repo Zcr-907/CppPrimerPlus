@@ -13,6 +13,10 @@ public:
 
     Time(int h, int m = 0);
 
+    int getHr();
+
+    int getMin();
+
     void addMin(int m);
 
     void addHr(int h);
@@ -25,6 +29,11 @@ public:
 
     // 运算符重载
     Time operator+(const Time &t) const;
+
+    // 友元函数
+    friend Time operator*(int m, Time &t);
+
+    friend int fGetHr(Time &t);
 };
 
 #endif //CPP_DEV_MYTIME0_H
