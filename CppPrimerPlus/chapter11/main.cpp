@@ -44,10 +44,11 @@ int main() {
 
     cout << "------- 友元运算符 -------" << endl;
     Time ucg_friend(1, 30);
+    // 通过友元函数来重载 * 运算符
     Time double_ucg_friend = 2 * ucg_friend;
-    cout << "double_ucg_friend= ";
-    double_ucg_friend.show();
-    cout << endl;
+    // 通过友元函数来重载 << 运算符: 必须是通过友元函数,因为如果不为友元函数的话,那么第一个操作数必须为Time
+    cout << double_ucg_friend << endl;
+    // 这只是举例可以定义任意的友元函数
     cout << "friend get double_ucg_friend hours= " << fGetHr(double_ucg_friend) << endl;
     cout << "------- 友元运算符 -------" << endl;
 

@@ -68,6 +68,12 @@ int fGetHr(Time &t) {
     return t.hours;
 }
 
+std::ostream &operator<<(std::ostream &os, Time &t) {
+    std::cout << t.hours << " hours, " << t.minutes << " minutes";
+    return os;
+}
+
+
 
 
 

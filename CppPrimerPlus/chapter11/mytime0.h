@@ -34,6 +34,8 @@ public:
     friend Time operator*(int m, Time &t);
 
     friend int fGetHr(Time &t);
+
+    friend std::ostream &operator<<(std::ostream &os, Time &t);
 };
 
 #endif //CPP_DEV_MYTIME0_H
