@@ -11,7 +11,7 @@ private:
 public:
     Time();
 
-    Time(int h, int m = 0);
+    explicit Time(int h, int m = 0);
 
     int getHr();
 
@@ -36,6 +36,10 @@ public:
     friend int fGetHr(Time &t);
 
     friend std::ostream &operator<<(std::ostream &os, Time &t);
+
+    // 转换函数: 被转换对象就是自身,所以不需要入参,返回值是int,所以也不需要对返回值进行定义
+    // 使用explicit拒绝隐式转换[ int a=Time{1} ],只能通过显式转换[ int a= (int)Time{1} ]
+    explicit operator int();
 };
 
 #endif //CPP_DEV_MYTIME0_H

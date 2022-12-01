@@ -52,10 +52,22 @@ int main() {
     cout << "friend get double_ucg_friend hours= " << fGetHr(double_ucg_friend) << endl;
     cout << "------- 友元运算符 -------" << endl;
 
+
+    cout << "------- 转换函数 -------" << endl;
+    //  在Time(int h, int m = 0)没有被explicit修饰的时候是可以将int赋值给Time对象,因为2个参数中第一个为int,第二个赋了默认值 => 等价Time a(1)
+    //  这种情况适用与
+    //  1.将int赋予Time对象
+    //  2.将Time对象初始化为int值时
+    //  3.函数的参数为Time对象时
+    //  4.函数的返回值为Time镀锡时
+    //  Time a=1;
+    int change_time = (int)Time{1};
+    cout << "change_time = {1} => change_time= " << change_time << endl;
+    cout << "------- 转换函数 -------" << endl;
 }
 
 Time operator/(int m, Time &n) {
     int total_min = (n.getHr() * 60 + n.getMin()) / m;
-    return {total_min / 60, total_min % 60};
+    return Time{total_min / 60, total_min % 60};
 }
 

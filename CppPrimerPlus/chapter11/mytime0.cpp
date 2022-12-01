@@ -73,6 +73,10 @@ std::ostream &operator<<(std::ostream &os, Time &t) {
     return os;
 }
 
+Time::operator int() {
+    return hours * 60 + minutes;
+}
+
 
 
 
