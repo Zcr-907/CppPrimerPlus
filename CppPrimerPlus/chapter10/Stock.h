@@ -27,7 +27,9 @@ private:
 
 // 公共访问权限
 public:
+    // 类成员
     static const int class_field = 2;
+
     int test_copy = 1;
 
     // 声明构造函数来进行初始化成员属性
