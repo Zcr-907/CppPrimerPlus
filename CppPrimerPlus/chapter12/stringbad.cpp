@@ -13,6 +13,15 @@ StringBad::StringBad(const char *s) {
               << "\" object created\n";
 }
 
+StringBad::StringBad(const StringBad &sb) {
+    len = (int) std::strlen(sb.str);
+    str = new char[len + 1];
+    std::strcpy(str, sb.str);
+    num_strings++;
+    std::cout << num_strings << " : \"" << str
+              << "\" object created\n";
+}
+
 StringBad::StringBad() {
     len = 4;
     str = new char[4];
@@ -31,4 +40,17 @@ StringBad::~StringBad() {
 std::ostream &operator<<(std::ostream &os, const StringBad &st) {
     os << st.str;
     return os;
+}
+
+StringBad &StringBad::operator=(const StringBad &sb) {
+    // 如果是a=a;直接返回即可
+    if (this == &sb) {
+        return *this;
+    }
+    // 由于在使用赋值运算符之前已经为str分配了内存空间,为防止内存泄露,需要对之前分配的空间进行释放
+    delete[] str;
+    len = sb.len;
+    str = new char[len + 1];
+    std::strcpy(str, sb.str);
+    return *this;
 }
