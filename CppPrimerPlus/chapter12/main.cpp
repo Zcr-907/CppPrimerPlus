@@ -37,6 +37,30 @@ int main() {
 
         cout << "HowMany StringBad: " << StringBad::howMany() << endl;
 
+        cout << "------- 定位new运算符与常规new运算符 -------" << endl;
+        // 创建一块自定义内存区域
+        {
+            // 存在2个问题
+            // 1.如果使用相同的一块Buffer起始地址,将导致buffer_1的内容被buffer_2所覆盖.
+            //   eg: StringBad *buffer_2 = new(buffer_new)StringBad("buffer_2");
+            // 2.使用定位new运算符创建的对象不会调用析构函数,需要显示调度析构函数
+            char *buffer_new = new char[512];
+            StringBad *buffer_1 = new(buffer_new)StringBad("buffer_1");
+            StringBad *stack_1 = new StringBad("stack_1");
+            StringBad *buffer_2 = new(buffer_new + sizeof(StringBad))StringBad("buffer_2");
+            StringBad *stack_2 = new StringBad("stack_2");
+
+            cout << "buffer_1: " << *buffer_1 << endl;
+            cout << "buffer_2: " << *buffer_2 << endl;
+
+            delete stack_1;
+            delete stack_2;
+            // 3.删除顺序应该和创建顺序相反,因为晚创建的对象可能依赖早创建的对象
+            buffer_1->~StringBad();
+            buffer_2->~StringBad();
+            delete[] buffer_new;
+        }
+        cout << "------- 定位new运算符与常规new运算符 -------" << endl;
         cout << "------- leave code region -------" << endl;
     }
 }
