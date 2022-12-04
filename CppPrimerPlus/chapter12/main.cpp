@@ -34,6 +34,10 @@ int main() {
         // jiao = jiu;     使用默认赋值运算符将jiu的每个成员属性赋值给jiao,这将会导致上述默认复制函数的问题
         StringBad jiao;
         jiao = jiu;
+
+        cout << "HowMany StringBad: " << StringBad::howMany() << endl;
+
+        cout << "------- leave code region -------" << endl;
     }
 }
 

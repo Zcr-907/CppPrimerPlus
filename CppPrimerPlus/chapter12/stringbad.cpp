@@ -54,3 +54,8 @@ StringBad &StringBad::operator=(const StringBad &sb) {
     std::strcpy(str, sb.str);
     return *this;
 }
+
+int StringBad::howMany() {
+    return num_strings;
+}
+

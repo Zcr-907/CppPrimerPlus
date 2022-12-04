@@ -31,6 +31,12 @@ public:
 
     // 自定义赋值运算符,防止使用默认运算符造成问题
     StringBad &operator=(const StringBad &sb);
+
+    // 静态函数
+    // 静态函数不能访问成员属性
+    //        类对象不能调用静态方法
+    //        静态函数不能使用this指针
+    static int howMany();
 };
 
 #endif
