@@ -44,6 +44,10 @@ int main() {
             // 1.如果使用相同的一块Buffer起始地址,将导致buffer_1的内容被buffer_2所覆盖.
             //   eg: StringBad *buffer_2 = new(buffer_new)StringBad("buffer_2");
             // 2.使用定位new运算符创建的对象不会调用析构函数,需要显示调度析构函数
+
+
+            // 在堆中创建一个自定义管理的内存区域 =>
+            // 通过 new(buffer_new)StringBad("buffer_1");  这样创建出来的StringBad对象就处于自定义创建的buffer_new区域
             char *buffer_new = new char[512];
             StringBad *buffer_1 = new(buffer_new)StringBad("buffer_1");
             StringBad *stack_1 = new StringBad("stack_1");
