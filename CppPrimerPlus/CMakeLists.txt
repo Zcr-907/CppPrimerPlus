@@ -10,6 +10,7 @@ ADD_EXECUTABLE(cpp_08_dev ./chapter08/main.cpp)
 ADD_EXECUTABLE(cpp_09_dev ./chapter09/main.cpp ./chapter09/header_test.cpp ./chapter09/header_test.h)
 ADD_EXECUTABLE(cpp_10_dev ./chapter10/main.cpp ./chapter10/Stock.h ./chapter10/Stock.cpp)
 ADD_EXECUTABLE(cpp_11_dev ./chapter11/main.cpp ./chapter11/mytime0.cpp ./chapter11/mytime0.h)
-ADD_EXECUTABLE(cpp_12_dev ./chapter12/main.cpp ./chapter12/stringbad.cpp ./chapter12/stringbad.h)
+ADD_EXECUTABLE(cpp_12_dev ./chapter12/main.cpp ./chapter12/stringbad.cpp ./chapter12/stringbad.h
+        ./chapter12/queue.cpp ./chapter12/queue.h)
 
 
