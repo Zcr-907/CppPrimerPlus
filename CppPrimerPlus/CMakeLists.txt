@@ -13,4 +13,6 @@ ADD_EXECUTABLE(cpp_11_dev ./chapter11/main.cpp ./chapter11/mytime0.cpp ./chapter
 ADD_EXECUTABLE(cpp_12_dev ./chapter12/main.cpp ./chapter12/stringbad.cpp ./chapter12/stringbad.h
         ./chapter12/queue.cpp ./chapter12/queue.h)
 
+ADD_EXECUTABLE(cpp_13_dev ./chapter13/main.cpp ./chapter13/tabtenn0.cpp ./chapter13/tabtenn0.h)
+
 
