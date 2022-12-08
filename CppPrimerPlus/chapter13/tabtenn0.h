@@ -18,6 +18,8 @@ public:
     bool hasTable() const { return _hasTable; };
 
     void resetTable(bool v) { _hasTable = v; };
+
+    virtual void toString() const;
 };
 
 // >>>>>>> sub class >>>>>>>
@@ -36,6 +38,11 @@ public:
     void resetRating(unsigned int r) {
         _rating = r;
     }
+
+    void name() const;
+
+    // 可以用virtual来标识这是一个虚方法,这里为了去除警告所以删除了
+    void toString() const override;
 };
 
 

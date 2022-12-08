@@ -37,8 +37,30 @@ int main() {
     // => TableTennisPlayer(const TableTennisPlayer &p);            // 通过上述的引用兼容属性将子类向上转型为基类,然后调用了默认复制函数
     TableTennisPlayer p5(r3);
     // => TableTennisPlayer& operator=(const TableTennisPlayer &p); // 通过上述的引用兼容属性将子类向上转型为基类,然后调用了默认赋值运算符
-    TableTennisPlayer p6=r3;
+    TableTennisPlayer p6 = r3;
     cout << "------- 子类与父类 -------" << endl;
+
+    cout << "------- 虚方法 -------" << endl;
+    // 可以在子类中重新申明并定义一个非虚name(),但是存在一个问题: 程序根据引用类型或者指针类型来选择方法版本,就不能多态的根据对象类型来选择方法版本
+    TableTennisPlayer p7("SuperClass", "p7", false);
+    p7.name();
+    cout << endl;
+    RatePlayer r4(4, "SubClass", "r4", false);
+    TableTennisPlayer &p8 = r4;
+    p8.name();
+    cout << endl;
+    r4.name();
+    cout << endl;
+
+
+    // 采用虚方法,程序将根据对象的实际类型来调用
+    p7.toString();
+    cout << endl;
+    p8.toString();
+    cout << endl;
+    cout << "------- 虚方法 -------" << endl;
+
+
 }
 
 void show(TableTennisPlayer &p) {
