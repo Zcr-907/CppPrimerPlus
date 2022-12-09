@@ -31,6 +31,7 @@ RatePlayer::RatePlayer(unsigned int r, const TableTennisPlayer &tp) : TableTenni
 
 void RatePlayer::name() const {
     cout << "RatePlayer: ";
+    // 基类名::基类方法 => Super.method()
     TableTennisPlayer::name();
 }
 
