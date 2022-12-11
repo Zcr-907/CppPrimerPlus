@@ -60,6 +60,14 @@ int main() {
     cout << endl;
     cout << "------- 虚方法 -------" << endl;
 
+    cout << "------- 静态联编和动态联编 -------" << endl;
+    // 静态联编: 静态分派(重载方法)
+    // 动态联编: 动态分派(通过虚方法重写父类方法)
+
+    // 当函数为传值调用时,如果传入子类就将子类中的基类部分传递给函数
+    void toUpper(TableTennisPlayer p);
+    toUpper(r3);
+    cout << "------- 静态联编和动态联编 -------" << endl;
 
 }
 
@@ -74,4 +82,10 @@ void show(TableTennisPlayer &p) {
         cout << "no!" << endl;
 
     }
+}
+
+void toUpper(TableTennisPlayer p) {
+    cout << "向上转型:";
+    p.toString();
+    cout << endl;
 }
