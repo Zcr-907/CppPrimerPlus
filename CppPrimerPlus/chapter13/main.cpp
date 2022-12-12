@@ -68,7 +68,19 @@ int main() {
     void toUpper(TableTennisPlayer p);
     toUpper(r3);
     cout << "------- 静态联编和动态联编 -------" << endl;
+    cout << "------- 虚函数实现原理 -------" << endl;
 
+    // result: RatePlayer(_rating: 2	TableTennisPlayer(_firstName: none	_lastName: none	_hasTable: 0))
+    // ManRatePlayer调用默认构造函数,默认构造函数调用之前会调用RatePlayer的默认构造函数,所以_rating=2
+    // 虚函数实现原理:
+    // 1.编译器为每个对象都新增一个虚方法表(一个指向函数地址数组的指针)
+    // 2.每个子类对象都包含一个指向独立地址表的指针。如果子类重新定义了虚方法,那么虚方法表就保存新函数地址,否则保存原始版本的函数(最近重写版本)
+    // 3.特殊的,如果基类声明 int m1(); 子类声明  int m1(int a); => 那么m1()将会被隐藏,子类中的m1(int a)并不会作为m1()的重载版本
+    //         但是如果返回类型为基类引用或者指针,那么重写版本可以为子类引用或者指针
+    ManRatePlayer m1;
+    m1.toString();
+    cout<<endl;
+    cout << "------- 虚函数实现原理 -------" << endl;
 }
 
 void show(TableTennisPlayer &p) {

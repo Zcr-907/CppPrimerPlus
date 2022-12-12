@@ -45,5 +45,8 @@ public:
     void toString() const override;
 };
 
+class ManRatePlayer : public RatePlayer {
+
+};
 
 #endif //CPP_DEV_TABTENN0_H
