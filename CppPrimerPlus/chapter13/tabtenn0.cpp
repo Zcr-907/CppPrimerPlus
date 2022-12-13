@@ -36,7 +36,15 @@ void RatePlayer::name() const {
 }
 
 void RatePlayer::toString() const {
-    cout << "RatePlayer(" << "_rating: " << _rating <<"\t";
+    cout << "RatePlayer(" << "_rating: " << _rating << "\t";
     TableTennisPlayer::toString();
     cout << ")";
+}
+
+void RatePlayer::setAge(double age) {
+    _age = age;
+}
+
+double RatePlayer::getAge() {
+    return _age;
 }

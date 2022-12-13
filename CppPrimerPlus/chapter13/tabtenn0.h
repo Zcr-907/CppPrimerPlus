@@ -10,6 +10,8 @@ private:
     string _firstName;
     string _lastName;
     bool _hasTable;
+protected:
+    double _age;
 public:
     explicit TableTennisPlayer(const string &fn = "none", const string &ln = "none", bool ht = false);
 
@@ -43,6 +45,11 @@ public:
 
     // 可以用virtual来标识这是一个虚方法,这里为了去除警告所以删除了
     void toString() const override;
+
+    void setAge(double age);
+
+    double getAge();
+
 };
 
 class ManRatePlayer : public RatePlayer {

@@ -79,8 +79,17 @@ int main() {
     //         但是如果返回类型为基类引用或者指针,那么重写版本可以为子类引用或者指针
     ManRatePlayer m1;
     m1.toString();
-    cout<<endl;
+    cout << endl;
     cout << "------- 虚函数实现原理 -------" << endl;
+
+    cout << "------- protected -------" << endl;
+    // 对于基类使用protected修饰的成员，子类中可以进行直接使用,但是其他作用域是不可见的
+    RatePlayer r5;
+    r5.setAge(5);
+    cout << "rg.age: "<<r5.getAge() << endl;
+    cout << "------- protected -------" << endl;
+
+
 }
 
 void show(TableTennisPlayer &p) {
