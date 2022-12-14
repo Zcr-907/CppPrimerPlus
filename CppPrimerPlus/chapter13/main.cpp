@@ -1,6 +1,6 @@
 #include <iostream>
 #include "tabtenn0.h"
-
+#include "abstract0.h"
 using namespace std;
 
 int main() {
@@ -89,6 +89,13 @@ int main() {
     cout << "rg.age: "<<r5.getAge() << endl;
     cout << "------- protected -------" << endl;
 
+    cout << "------- 抽象基类 -------" << endl;
+    // 抽象类只能作为基类,而不能被实例化
+    // AbstractClass ac1;
+
+    SubClassA subA1;
+    subA1.show();
+    cout << "------- 抽象基类 -------" << endl;
 
 }
 
