@@ -93,6 +93,7 @@ int main() {
     // 抽象类只能作为基类,而不能被实例化
     // AbstractClass ac1;
 
+
     SubClassA subA1;
     subA1.show();
     cout << "------- 抽象基类 -------" << endl;
