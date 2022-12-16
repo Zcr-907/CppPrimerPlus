@@ -7,6 +7,7 @@ using std::string;
 
 class TableTennisPlayer {
 private:
+    // 对于类成员为对象的成员属性,在初始化之前会调用构造方法,所以在调用构造方法的时候使用初始化成员列表的方式进行初始化
     string _firstName;
     string _lastName;
     bool _hasTable;

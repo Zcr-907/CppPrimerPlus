@@ -3,7 +3,7 @@
 
 using namespace std;
 
-struct Human {
+struct human {
     int num;
     string name;    // 为啥不使用char[],使用char就不能像h2那样简单的进行初始化赋值了
     int age;
@@ -40,14 +40,14 @@ struct {
 
 void struct_unc() {
 
-    Human h0 = {0, "h0", 23, 173.5};
-    Human h1{1, "h1", 21, 172.5};
-    Human h2;
+    human h0 = {0, "h0", 23, 173.5};
+    human h1{1, "h1", 21, 172.5};
+    human h2;
     h2.num = 2;
     h2.name = "h2";
     h2.age = 22;
     h2.height = 170.1;
-    Human h3{3};
+    human h3{3};
 
     cout << "-------> struct_unc <-------" << endl;
     cout << "num: " << h0.num << "\tname: " << h0.name << "\tage: " << h0.age << "\theight: " << h0.height << endl;
@@ -58,9 +58,9 @@ void struct_unc() {
 
     // 证明"h5_b = h5_a": 与Java不同,这是深拷贝,不是将h5_a的引用赋给h5_b
     //                   无论采取如下何种方式赋值,当h5_b声明时就开辟了一块内存空间,而后的赋值操作,是将h5_a的属性值拷贝至h5_b属性的地址上
-    //                   Human h5_b=h5_a; struct Human h5_b=h5_a;
-    Human h5_a = {50, "h5a", 23, 173.5};
-    Human h5_b{};
+    //                   human h5_b=h5_a; struct human h5_b=h5_a;
+    human h5_a = {50, "h5a", 23, 173.5};
+    human h5_b{};
     h5_b = h5_a;
     cout << "&h5_a.num: " << &h5_a.num << "\th5_a.num: " << h5_a.num << "\t&h5_a.name: " << &h5_a.name
          << "\th5_a.name: " << h5_a.name << endl;
