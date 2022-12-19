@@ -16,5 +16,7 @@ ADD_EXECUTABLE(cpp_13_dev ./chapter13/main.cpp ./chapter13/tabtenn0.cpp ./chapte
         ./chapter13/abstract0.cpp ./chapter13/abstract0.h)
 ADD_EXECUTABLE(cpp_14_dev ./chapter14/main.cpp ./chapter14/human.cpp ./chapter14/human.h
         ./chapter14/stacktp.cpp ./chapter14/stacktp.h)
+ADD_EXECUTABLE(cpp_15_dev ./chapter15/main.cpp ./chapter15/friendclass.cpp ./chapter15/friendclass.h)
+
 
 
