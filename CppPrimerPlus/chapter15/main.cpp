@@ -36,5 +36,21 @@ int main() {
 
     cout << "------- typeid -------" << endl;
     cout << "------- RTTI -------" << endl;
+
+    cout << "------- tryCatch -------" << endl;
+    void tryCatch(int a, int b);
+    tryCatch(1, 0);
+    cout << "------- tryCatch -------" << endl;
+}
+
+void tryCatch(int a, int b) {
+    try {
+        if (b == 0) {
+            throw "除数不能为0";
+        }
+        cout << a / b << endl;
+    } catch (const char *message) {
+        cout << message << endl;
+    }
 }
 
