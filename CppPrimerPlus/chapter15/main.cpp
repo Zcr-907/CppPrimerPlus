@@ -41,6 +41,17 @@ int main() {
     void tryCatch(int a, int b);
     tryCatch(1, 0);
     cout << "------- tryCatch -------" << endl;
+
+    cout << "------- friend method -------" << endl;
+    string name = "tv1_1";
+    Tv1 tv1_1(name);
+    Remote1 r1_1;
+
+    tv1_1.toString();
+    string opsName = "ops_remote";
+    r1_1.opsTv1(tv1_1, opsName);
+    tv1_1.toString();
+    cout << "------- friend method -------" << endl;
 }
 
 void tryCatch(int a, int b) {
